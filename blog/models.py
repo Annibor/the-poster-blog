@@ -52,3 +52,34 @@ class Post(models.Model):
 
   def __str__(self):
        return f"{self.title}"
+  
+
+class Comment(models.Model):
+  """
+  This model represents a comment.
+
+  Attributes:
+  post: The post the comment is associated with.
+  author: The author of the comment - the registered user.
+  body: The content of the comment.
+  approved: Indicates whether the comment was approved or not.
+  created_on: The date and time when the comment was created.
+  active: A boolean value indicating whether the comment is active.
+  """
+  post = models.ForeignKey("Post", on_delete=models.CASCADE, related_name="comments")
+  author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter"
+        )
+  body = models.TextField()
+  approved = models.BooleanField(default=False)
+  created_on = models.DateTimeField(auto_now_add=True)
+  active = models.BooleanField(default=False)
+
+  class Meta:
+    """
+    Comment Meta Data
+    """
+    ordering = ["created_on"]
+
+  def __str__(self):
+    return f"Comment {self.body} by {self.name}"
