@@ -15,15 +15,23 @@
     <div class="row">
       {% for post in post_list %}
       <div class="col-md-12">
-        <div>
+        <div class="blog-post-cont">
           <div class="row">
             <div class="col-md-6 col-lg-6 col-xl-8 d-flex">
               <p>images for post?</p>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-4 d-flex">
-              <h4>{{ post.created_on.date }}</h4>
-              <h2>{{ post.title }}</h2>
+            <div class="col-md-6 col-lg-6 col-xl-4">
+              <div class="heading-div">
+                <h4 class="date">{{ post.created_on.date }}</h4>
+                <h2>{{ post.title }}</h2>
+              </div>
               <p>Want to be the first part of the post.</p>
+            </div>
+            <div class="likes-comments">
+              <p>here will be likes and comments</p>
+            </div>
+            <div class="cat-style">
+              <p>here will be categories</p>
             </div>
           </div>
         </div>
