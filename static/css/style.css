@@ -96,6 +96,10 @@ h2 {
   color: #999;
 }
 
+.post-content {
+  font-size: 1.6rem;
+}
+
 @media (min-width: 34rem) {
   html {
     font-size: 62.5%;
