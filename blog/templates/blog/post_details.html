@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} Post details {% endblock %}
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="blog-post-cont">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 col-xl-5 d-flex">
+            <p>images for post?</p>
+          </div>
+          <div class="col-md-6 col-lg-7 col-xl-7">
+            <div class="heading-div">
+              <h4 class="date">{{ post.created_on.date }}</h4>
+              <h2>{{ post.title }}</h2>
+            </div>
+            <a href="{% url 'post_details' post.slug %}" class="post-link">
+            <div class="post-content">{{ post.post_content | safe }}</div>
+          </a>
+          </div>
+          <div class="likes-comments">
+            <p>here will be likes and comments</p>
+          </div>
+          <div class="cat-style">
+            <p>here will be categories</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
