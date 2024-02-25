@@ -25,10 +25,10 @@ def post_details(request, slug):
     """
 
     queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post_content = get_object_or_404(queryset, slug=slug)
 
     return render(
         request,
         "blog/post_details.html",
-        {"post": post},
+        {"post": post_content},
     )
