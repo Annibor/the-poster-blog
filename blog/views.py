@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
@@ -33,10 +34,14 @@ def comment_content(request, slug):
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.post = post_content
-            comment.save()
+          comment = comment_form.save(commit=False)
+          comment.author = request.user
+          comment.post = post_content
+          comment.save()
+          messages.add_message(
+               request, messages.SUCCESS,
+               'Comment submitted and awaiting approval'
+          )
     
 
     return render(
