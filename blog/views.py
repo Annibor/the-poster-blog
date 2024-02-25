@@ -23,7 +23,7 @@ def comment_content(request, slug):
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`blog/blog.html`
     """
 
     queryset = Post.objects.filter(status=1)
@@ -37,6 +37,7 @@ def comment_content(request, slug):
           comment = comment_form.save(commit=False)
           comment.author = request.user
           comment.post = post_content
+          comment.active = True
           comment.save()
           messages.add_message(
                request, messages.SUCCESS,

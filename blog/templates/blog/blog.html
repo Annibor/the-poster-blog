@@ -34,18 +34,20 @@
             <div class="cat-style">
               <p>here will be categories</p>
             </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CommentsModal">
-              Comments
-            </button>
-            </a>
-            <div class="modal fade" id="CommentsModal" tabindex="-1" role="dialog" aria-labelledby="CommentsTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
+            <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CommentsModal">
+            Comments
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="CommentsModal" data-bs-backdrop="static" 
+          data-bs-keyboard="false" tabindex="-1" aria-labelledby="#CommentsModalLabel"
+          aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="CommentsTitle">Comments</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Comments</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <!-- Loop through comments and display them -->
@@ -63,28 +65,28 @@
                       {% endif %}
                     </div>
                     {% endfor %}
-                  </div>
-                  <div class="container my-5 py-5 text-dark">
-                    <div class="row d-flex justify-content-center">
-                      <div class="col-md-10 col-lg-8 col-xl-6">
-                        <div class="card">
-                          <div class="card-body p-4">
-                            <div class="d-flex flex-start w-100">
-                              {% if user.is_authenticated %}
-                                <h3>Leave a comment:</h3>
-                                <p>Posting as: {{ user.username }}</p>
-                              <div class="form-outline">
-                                <textarea class="form-control" id="comment_form" rows="4"></textarea>
-                                <label class="form-label" for="comment_form">
-                                  Write you comment here!
-                                </label>
-                                <div>
-                                  <button type="button" class="btn btn-danger">
-                                    Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
-                                  </button>
-                                  {% else %}
-                                  <p>Log in to leave a comment</p>
-                                  {% endif %}
+                    <div class="container my-5 py-5 text-dark">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-6">
+                          <div class="card">
+                            <div class="card-body p-4">
+                              <div class="d-flex flex-column w-100">
+                                {% if user.is_authenticated %}
+                                  <h3>Leave a comment:</h3>
+                                  <p>Posting as: {{ user.username }}</p>
+                                <div class="form-outline">
+                                  <textarea class="form-control" id="comment_form" rows="4"></textarea>
+                                  <label class="form-label" for="comment_form">
+                                    Write you comment here!
+                                  </label>
+                                  <div>
+                                    <button type="button" class="btn btn-secondary w-100">
+                                      Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                                    </button>
+                                    {% else %}
+                                    <p>Log in to leave a comment</p>
+                                    {% endif %}
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -94,7 +96,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
