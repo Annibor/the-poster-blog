@@ -29,6 +29,7 @@ def comment_content(request, slug):
     post_content = get_object_or_404(queryset, slug=slug)
     comments = post_content.comments.all().order_by("-created_on")
     comment_count = post_content.comments.filter(approved=True).count()
+    comment_form = CommentForm()
     
 
     return render(
@@ -38,5 +39,6 @@ def comment_content(request, slug):
              "post": post_content,
              "comments": comments,
              "comment_count": comment_count,
+             "comment_form": comment_form,
         }
      )
