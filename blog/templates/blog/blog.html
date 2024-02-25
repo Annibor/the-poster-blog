@@ -25,15 +25,49 @@
                 <h4 class="date">{{ post.created_on.date }}</h4>
                 <h2>{{ post.title }}</h2>
               </div>
-              <a href="{% url 'post_details' post.slug %}" class="post-link">
               <div class="post-content">{{ post.post_content | safe }}</div>
-            </a>
             </div>
             <div class="likes-comments">
-              <p>here will be likes and comments</p>
+              <i class="far fa-comments"></i> {{ comment_count }}
             </div>
             <div class="cat-style">
               <p>here will be categories</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CommentsModal">
+              Comments
+            </button>
+            </a>
+            <div class="modal fade" id="CommentsModal" tabindex="-1" role="dialog" aria-labelledby="CommentsTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="CommentsTitle">Comments</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Loop through comments and display them -->
+                    {% for comment in comments %}
+                    <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none {% endif %}">
+                      <p class="font-weight-bold">
+                        {{ comment.author }}
+                        <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
+                      </p>
+                      <div id="comment{{ comment.id }}">
+                        {{ comment.body | linebreaks }}
+                      </div>
+                      {% if not comment.approved and comment.author == user %}
+                      <p class="approval">This comment is awaiting approval</p>
+                      {% endif %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
