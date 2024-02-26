@@ -41,15 +41,16 @@
           
           <!-- Modal -->
           <div class="modal fade" id="CommentsModal" data-bs-backdrop="static" 
-          data-bs-keyboard="false" tabindex="-1" aria-labelledby="#CommentsModalLabel"
+          data-bs-keyboard="false" tabindex="-1" aria-labelledby="CommentsModalLabel"
           aria-hidden="true">
               <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Comments</h1>
+                    <h1 class="modal-title fs-5" id="CommentsModalLabel">Comments</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
+                    {% if comments %}
                     <!-- Loop through comments and display them -->
                     {% for comment in comments %}
                     <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none {% endif %}">
@@ -65,6 +66,9 @@
                       {% endif %}
                     </div>
                     {% endfor %}
+                    {% else %}
+                    <p>No comments yet.</p>
+                    {% endif %}
                     <div class="container my-5 py-5 text-dark">
                       <div class="row d-flex justify-content-center">
                         <div class="col-md-10 col-lg-8 col-xl-6">
