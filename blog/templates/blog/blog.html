@@ -78,15 +78,12 @@
                                 {% if user.is_authenticated %}
                                   <h3>Leave a comment:</h3>
                                   <p>Posting as: {{ user.username }}</p>
-                                <div class="form-outline">
-                                  <textarea class="form-control" id="comment_form" rows="4"></textarea>
-                                  <label class="form-label" for="comment_form">
-                                    Write you comment here!
-                                  </label>
+                                  <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                                  {{ comment_form | crispy }}
+                                  {% csrf_token %}
+                                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                  </form>
                                   <div>
-                                    <button type="button" class="btn btn-secondary w-100">
-                                      Send <i class="fas fa-long-arrow-alt-right ms-1"></i>
-                                    </button>
                                     {% else %}
                                     <p>Log in to leave a comment</p>
                                     {% endif %}
