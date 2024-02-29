@@ -29,10 +29,9 @@
               {% if user.is_authenticated %}
               <div class="post-content">{{ post.post_content | safe }}</div>
               {% else %}
-              <div class="post-content">{{ post.post_content|truncatewords:45 }}</div>
-              <a href="{% url 'login' %}?next={{ request.path }}">Please log in to read more!</a>
+              <div class="post-content">{{ post.post_content | truncatewords:45 }}</div>
+              <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
               {% endif %}
-              <div class="post-content">{{ post.post_content | safe }}</div>
             </div>
             <div class="likes-comments">
               <i class="far fa-comments"></i> {{ post.approved_comments_count }}
