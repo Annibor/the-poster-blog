@@ -26,9 +26,15 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+        {% if latest_post %}
         <div>
-          <p>here will be latest post</p>
+          <h2>{{ latest_post.title }}</h2>
+          <p>{{ latest_post_content }}</p>
+          <a href="{% url 'blog:post_detail' slug=latest_post.slug %}">Read more</a>
         </div>
+        {% else %}
+        <p>No posts available.</p>
+        {% endif %}
       </div>
     </div>
   </div>
