@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.contrib import messages
+from django.db.models import Count, Q
 from .models import Post
 from .forms import CommentForm
 
@@ -16,6 +17,15 @@ class PostList(generic.ListView):
      template_name = "blog/blog.html"
      context_object_name = 'post_list'
      paginate_by = 6
+
+     def get_queryset(self):
+        """
+        Overrides the default queryset to filter posts by status, annotate each post with
+        the count of approved comments, and order the posts by their creation date in descending order.
+        """
+        return Post.objects.filter(status=1).annotate(
+            approved_comments_count=Count('comments', filter=Q(comments__approved=True))
+        ).order_by('-created_on')
 
 
 def comment_content(request, slug):
