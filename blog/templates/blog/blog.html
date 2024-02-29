@@ -26,6 +26,12 @@
                 <h4 class="date">{{ post.created_on.date }}</h4>
                 <h2>{{ post.title }}</h2>
               </div>
+              {% if user.is_authenticated %}
+              <div class="post-content">{{ post.post_content | safe }}</div>
+              {% else %}
+              <div class="post-content">{{ post.post_content|truncatewords:45 }}</div>
+              <a href="{% url 'login' %}?next={{ request.path }}">Please log in to read more!</a>
+              {% endif %}
               <div class="post-content">{{ post.post_content | safe }}</div>
             </div>
             <div class="likes-comments">
