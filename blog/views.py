@@ -4,11 +4,17 @@ from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
+
 # Create your views here.
 
 class PostList(generic.ListView):
-     queryset = Post.objects.filter(status=1)
+     """
+     A view that inherits from Django's ListView for displaying a list of posts.
+     It is configured to paginate the posts, showing a limited number per page.
+     """
+     model = Post
      template_name = "blog/blog.html"
+     context_object_name = 'post_list'
      paginate_by = 6
 
 
