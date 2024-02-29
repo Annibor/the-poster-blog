@@ -27,7 +27,16 @@ class PostList(generic.ListView):
             approved_comments_count=Count('comments', filter=Q(comments__approved=True))
         ).order_by('-created_on')
      
-     
+     def get_context_data(self, **kwargs):
+        """
+        Extends the base implementation to add the list of posts to the context.
+        """
+        context = super().get_context_data(**kwargs)
+        queryset = self.get_queryset()
+        posts = list(queryset)
+        context['posts'] = posts
+        return context
+
 
 def comment_content(request, slug):
     """
