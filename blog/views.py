@@ -14,29 +14,21 @@ class PostList(generic.ListView):
 
 def comment_content(request, slug):
     """
-    Display an individual :model:`blog.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`blog.Post`.
-
-    **Template:**
-
-    :template:`blog/blog.html`
+    Display and handle comments for a blog post.
     """
 
     queryset = Post.objects.filter(status=1)
-    post_content = get_object_or_404(queryset, slug=slug)
-    comments = post_content.comments.all().order_by("-created_on")
-    comment_count = post_content.comments.filter(approved=True).count()
-    comment_form = CommentForm()
+    post = get_object_or_404(queryset, slug=slug)
+    comments = post.comments.all().order_by("-created_on")
+    comment_count = post.comments.filter(approved=True).count()
+    print("Comment count:", comment_count) # REmember to delte!!!
+    print("Received a POST request")
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
           comment = comment_form.save(commit=False)
           comment.author = request.user
-          comment.post = post_content
+          comment.post = post
           comment.active = True
           comment.save()
           messages.add_message(
@@ -44,12 +36,14 @@ def comment_content(request, slug):
                'Comment submitted and awaiting approval'
           )
     
+    comment_form = CommentForm()
+    print("About to render template")
 
     return render(
         request,
         "blog/blog.html",
         {
-             "post": post_content,
+             "post": post,
              "comments": comments,
              "comment_count": comment_count,
              "comment_form": comment_form,

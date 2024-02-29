@@ -79,10 +79,11 @@
                                   <h3>Leave a comment:</h3>
                                   <p>Posting as: {{ user.username }}</p>
                                   <form id="commentForm" method="post">
-                                  {{ comment_form.body.value}}
                                   {% csrf_token %}
-                                  </form>
+                                  {{ comment_form | crispy }}
                                   <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                  </form>
+                                  
                                   <div>
                                     {% else %}
                                     <p>Log in to leave a comment</p>
