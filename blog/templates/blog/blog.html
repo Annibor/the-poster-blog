@@ -29,7 +29,7 @@
               {% if user.is_authenticated %}
               <div class="post-content">{{ post.post_content | safe }}</div>
               {% else %}
-              <div class="post-content">{{ post.post_content | truncatewords:45 }}</div>
+              <div class="post-content">{{ post.post_content | truncatewords:45 |safe }}</div>
               <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
               {% endif %}
             </div>
