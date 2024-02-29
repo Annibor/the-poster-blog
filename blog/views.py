@@ -26,7 +26,8 @@ class PostList(generic.ListView):
         return Post.objects.filter(status=1).annotate(
             approved_comments_count=Count('comments', filter=Q(comments__approved=True))
         ).order_by('-created_on')
-
+     
+     
 
 def comment_content(request, slug):
     """
