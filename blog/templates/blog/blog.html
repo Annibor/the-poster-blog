@@ -41,12 +41,12 @@
               <p>here will be categories</p>
             </div>
             <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CommentsModal">
-            Comments
-          </button>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="CommentsModal" data-bs-backdrop="static" 
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CommentsModal{{ post.id }}">
+              Comments
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="CommentsModal{{ post.id }}" data-bs-backdrop="static" 
           data-bs-keyboard="false" tabindex="-1" aria-labelledby="CommentsModalLabel"
           aria-hidden="true">
               <div class="modal-dialog modal-xl modal-dialog-scrollable">
