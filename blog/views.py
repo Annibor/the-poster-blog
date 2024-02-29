@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views import View
 from django.views import generic
 from django.contrib import messages
 from django.db.models import Count, Q
@@ -17,6 +18,7 @@ class PostList(generic.ListView):
      model = Post
      template_name = "blog/blog.html"
      context_object_name = 'post_list'
+     # Limits the number of posts displayed on a single page.
      paginate_by = 6
 
      def get_queryset(self):
@@ -61,40 +63,27 @@ class PostDetail(DetailView):
     
 
 
-def comment_content(request, slug):
-    """
-    Display and handle comments for a blog post.
-    """
-
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comments = post.comments.all().order_by("-created_on")
-    comment_count = post.comments.filter(approved=True).count()
-    print("Comment count:", comment_count) # REmember to delte!!!
-    print("Received a POST request")
-    if request.method == "POST":
+class CommentCreate(View):
+     """
+     A view handling the creation of a new comment for a specific post. This view processes
+     the POST request submitted through the comment form.
+     """
+     def post(self, request, slug):
+        """
+        Handles POST request. If the comment form is valid, saves the new comment
+        and associates it with the correct post and user.
+        """
+        post = get_object_or_404(Post, slug=slug)
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-          comment = comment_form.save(commit=False)
-          comment.author = request.user
-          comment.post = post
-          comment.active = True
-          comment.save()
-          messages.add_message(
-               request, messages.SUCCESS,
-               'Comment submitted and awaiting approval'
-          )
-    
-    comment_form = CommentForm()
-    print("About to render template")
-
-    return render(
-        request,
-        "blog/blog.html",
-        {
-             "post": post,
-             "comments": comments,
-             "comment_count": comment_count,
-             "comment_form": comment_form,
-        }
-     )
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+            messages.success(request, 'Comment submitted and awaiting approval')
+             # Redirect to the blog main page after successful comment submission.
+            return redirect('blog') 
+        else:
+            messages.error(request, 'Invalid comment.')
+            # If the form is invalid, redirect back to the blog's main page
+            return redirect('blog')
