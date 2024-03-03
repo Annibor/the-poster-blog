@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from django.views import View
 from django.views import generic
 from django.contrib import messages
 from django.db.models import Count, Q
 from django.views.generic.detail import DetailView
-from .models import Post
+from .models import Post, Like
 from .forms import CommentForm
 
 
@@ -87,3 +89,23 @@ class CommentCreate(View):
             messages.error(request, 'Invalid comment.')
             # If the form is invalid, redirect back to the blog's main page
             return redirect('blog')
+        
+
+class LikePost(LoginRequiredMixin, View):
+    """
+    Allows a logged-in user to like or unlike a post. If the post is already liked by the user,
+    this view will remove the like (toggle action).
+    """
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST request to like or unlike a post.
+        """
+        post_id = kwargs.get('post_id')
+        post = get_object_or_404(Post, id=post_id)
+        like, created = Like.objects.get_or_create(user=request.user, post=post)
+
+        if not created:
+            like.delete()
+
+        return redirect('blog:blog')
