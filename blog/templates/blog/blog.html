@@ -42,13 +42,17 @@
             </div>
             <div>
               {% if user.is_authenticated %}
-              <form method="post" action="{% url 'blog:like_post' post.id %}">
+            <form action="{% url 'blog:like_post' post.slug %}" method="post">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-link">
-                    Like
+                <button type="submit" class="btn">
+                    {% if request.user in post.likes.all %}
+                        <i class="fas fa-heart"></i> Unlike
+                    {% else %}
+                        <i class="far fa-heart"></i> Like
+                    {% endif %}
                 </button>
-              </form>
-        {% endif %}
+            </form>
+            {% endif %}
             </div>
             
             <!-- Button trigger modal -->
@@ -95,7 +99,7 @@
                                 {% if user.is_authenticated %}
                                   <h3>Leave a comment:</h3>
                                   <p>Posting as: {{ user.username }}</p>
-                                  <form method="post" action="{% url 'comment_create' slug=post.slug %}">
+                                  <form method="post" action="{% url 'blog:comment_create' slug=post.slug %}">
                                     {% csrf_token %}
                                     <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
                                     <button type="submit" class="btn btn-primary">Submit</button>
