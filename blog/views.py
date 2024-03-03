@@ -101,8 +101,8 @@ class LikePost(LoginRequiredMixin, View):
         """
         Handles POST request to like or unlike a post.
         """
-        post_id = kwargs.get('post_id')
-        post = get_object_or_404(Post, id=post_id)
+        slug = self.kwargs.get('slug')
+        post = get_object_or_404(Post, slug=slug)
         like, created = Like.objects.get_or_create(user=request.user, post=post)
 
         if not created:

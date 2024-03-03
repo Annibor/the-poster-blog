@@ -35,10 +35,22 @@
             </div>
             <div class="likes-comments">
               <i class="far fa-comments"></i> {{ post.approved_comments_count }}
+              <i class="fas fa-heart"></i> {{ post.post_likes.count }}
             </div>
             <div class="cat-style">
               <p>here will be categories</p>
             </div>
+            <div>
+              {% if user.is_authenticated %}
+              <form method="post" action="{% url 'blog:like_post' post.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-link">
+                    Like
+                </button>
+              </form>
+        {% endif %}
+            </div>
+            
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CommentsModal{{ post.id }}">
               Comments
