@@ -86,3 +86,26 @@ class Comment(models.Model):
 
   def __str__(self):
     return f"Comment {self.body} by {self.author}"
+
+
+class Like (models.Model):
+   """
+    Represents a 'like' given to a blog post by a user.
+
+    Attributes:
+        user (ForeignKey): The user who liked the post.
+        post (ForeignKey): The post that was liked.
+        created_at (datetime): The date and time the like was given.
+   """
+   user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_likes")
+   post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="post_likes")
+   created_on = models.DateTimeField(auto_now_add=True)
+
+   class Meta:
+      """
+      Make sure that a user can only like a post once.
+      """
+      unique_together = ("user", "post")
+
+   def __str__(self):
+      return f'{self.user} likes {self.post}'
