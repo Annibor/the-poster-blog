@@ -43,13 +43,13 @@
             <div>
               {% if user.is_authenticated %}
             <form action="{% url 'blog:like_post' post.slug %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="btn">
-                    {% if request.user in post.likes.all %}
-                        <i class="fas fa-heart"></i> Unlike
-                    {% else %}
-                        <i class="far fa-heart"></i> Like
-                    {% endif %}
+              {% csrf_token %}
+              <button type="submit" class="btn">
+                {% if request.user in post.likes.all %}
+                <i class="fas fa-heart"></i> Unlike
+                {% else %}
+                <i class="far fa-heart"></i> Like
+                {% endif %}
                 </button>
             </form>
             {% endif %}

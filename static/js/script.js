@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             commentText.value = commentContent;
             submitButton.innerText = "Update";
-            commentForm.setAttribute("action", `/blog/post/${commentId}/update/`);
+            commentForm.setAttribute("action", `/blog/post/${postSlug}/comment/${commentId}/update/`);
         });
     });
 
