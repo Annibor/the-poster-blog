@@ -4,9 +4,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const commentForm = document.querySelector("#commentForm"); 
     const submitButton = document.querySelector("#submitButton");
 
-    console.log("editButton:", editButtons);
-    console.log("commentText:", commentText);
-    console.log("commentForm:", commentForm);
-    console.log("submitButton:", submitButton);
-    console.log("Edit buttons found: ", editButtons.length);
+
+    if (editButtons) {
+        editButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const commentId = this.getAttribute("data-comment-id");
+                const commentContent = document.querySelector(`#comment${commentId}`).innerText;
+                
+                console.log(`Editing comment ID: ${commentId}`); 
+                console.log(`Current comment content: ${commentContent}`);
+            });
+        });
+    } else {
+        console.log("No edit buttons found.");
+    }
 });
