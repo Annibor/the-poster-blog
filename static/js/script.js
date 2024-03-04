@@ -21,6 +21,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 commentText.value = commentContent;
                 submitButton.innerText = "Update";
                 commentForm.setAttribute("action", `/blog/post/${commentId}/update/`);
+            });
         });
-    }
+        if (commentForm) {
+            commentForm.onsubmit = function(e) {
+                e.preventDefault();
+                // Debugging
+                console.log("Form submission intercepted");
+
+                // Prepare form data for AJAX submission
+                let formData = new FormData(this); 
+                const actionUrl = this.getAttribute("action");
+                // Debugging
+                console.log(`Form action URL: ${actionUrl}`); 
+
+                fetch(actionUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+                    },
+                })
+            };
+        }
+    }       
 });
