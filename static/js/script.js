@@ -9,13 +9,18 @@ document.addEventListener("DOMContentLoaded", function() {
         editButtons.forEach(button => {
             button.addEventListener("click", function() {
                 const commentId = this.getAttribute("data-comment-id");
+                const postSlug = commentForm.getAttribute("data-post-slug");
                 const commentContent = document.querySelector(`#comment${commentId}`).innerText;
                 
-                console.log(`Editing comment ID: ${commentId}`); 
+                // Debugging logs
+                console.log(`Editing comment ID: ${commentId}`);
+                console.log(`Post Slug: ${postSlug}`);
                 console.log(`Current comment content: ${commentContent}`);
-            });
+                console.log(`Form action set to: ${commentForm.getAttribute("action")}`);
+
+                commentText.value = commentContent;
+                submitButton.innerText = "Update";
+                commentForm.setAttribute("action", `/blog/post/${commentId}/update/`);
         });
-    } else {
-        console.log("No edit buttons found.");
     }
 });
