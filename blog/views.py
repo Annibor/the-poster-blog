@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
+from django.http import JsonResponse
+from django.views.generic import UpdateView
+from django.urls import reverse_lazy
 from django.views import View
 from django.views import generic
 from django.contrib import messages
 from django.db.models import Count, Q
 from django.views.generic.detail import DetailView
-from .models import Post, Like
+from .models import Post, Like, Comment
 from .forms import CommentForm
 
 
@@ -89,6 +92,25 @@ class CommentCreate(View):
             messages.error(request, 'Invalid comment.')
             # If the form is invalid, redirect back to the blog's main page
             return redirect('blog')
+        
+
+class CommentUpdate(LoginRequiredMixin, UpdateView):
+    model = Comment
+    fields = ['body']
+    
+    def form_valid(self, form):
+        self.object = form.save()
+        return JsonResponse({'status': 'success', 'message': 'Comment updated successfully.'})
+    
+    def form_invalid(self, form):
+        return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
+    
+    def test_func(self):
+        comment = self.get_object()
+        return self.request.user == comment.author
+
+
+
         
 
 class LikePost(LoginRequiredMixin, View):
