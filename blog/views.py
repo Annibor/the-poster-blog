@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.views.generic import UpdateView
-from django.urls import reverse_lazy
 from django.views import View
 from django.views import generic
 from django.contrib import messages
