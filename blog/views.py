@@ -87,11 +87,11 @@ class CommentCreate(View):
             comment.save()
             messages.success(request, 'Comment submitted and awaiting approval')
              # Redirect to the blog main page after successful comment submission.
-            return redirect('blog') 
+            return redirect('blog:blog') 
         else:
             messages.error(request, 'Invalid comment.')
             # If the form is invalid, redirect back to the blog's main page
-            return redirect('blog')
+            return redirect('blog:blog')
         
 
 class CommentUpdate(LoginRequiredMixin, UpdateView):
