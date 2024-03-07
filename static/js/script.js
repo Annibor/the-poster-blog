@@ -10,10 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (newCommentButton) {
         newCommentButton.addEventListener("click", function() {
             submitButton.innerText = "Submit";
-            commentForm.commentId = null;
             commentText.value = '';
-            const postSlug = commentorm.getAttribute("data-post-slug");
-            commentForm.setAttribute("action", "/blog/post/${postSlug}/comment/");
+            const postSlug = commentForm.getAttribute("data-post-slug");
+            commentForm.setAttribute("action", `/blog/post/${postSlug}/comment/`);;
         });
     }
 
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
             of the comment to edit. Get the post slug from the form's data-post-slug attribute.
             Find the comment's current text by its ID and get the text content   -- */
             const commentId = this.getAttribute("data-comment-id");
-            commentForm.commentId = commentId;
             const postSlug = commentForm.getAttribute("data-post-slug");
             const commentContent = document.querySelector(`#comment${commentId}`).innerText;
             
@@ -40,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
             commentText.value = commentContent;
             submitButton.innerText = "Update";
             commentForm.setAttribute("action", `/blog/post/${postSlug}/comment/${commentId}/`);
+
+            console.log(`Form action set to: ${commentForm.getAttribute("action")}`);
         });
     });
 
@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let formData = new FormData(this); 
         const actionUrl = this.getAttribute("action");
 
+        console.log("Form submission intercepted.");
+
+        
         fetch(actionUrl, {
             method: 'POST',
             body: formData,

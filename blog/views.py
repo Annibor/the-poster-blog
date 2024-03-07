@@ -94,6 +94,15 @@ class CommentCreate(View):
 class CommentUpdate(LoginRequiredMixin, UpdateView):
     model = Comment
     fields = ['body']
+
+    def get_object(self, queryset=None):
+        
+        post_slug = self.kwargs.get('post_slug')
+        post = get_object_or_404(Post, slug=post_slug)
+
+        
+        comment_id = self.kwargs.get('comment_id')
+        return get_object_or_404(Comment, id=comment_id, post=post)
     
     def form_valid(self, form):
         self.object = form.save()
