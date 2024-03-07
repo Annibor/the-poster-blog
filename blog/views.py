@@ -65,7 +65,6 @@ class PostDetail(DetailView):
          return context
     
 
-
 class CommentCreate(View):
      """
      A view handling the creation of a new comment for a specific post. This view processes
@@ -100,6 +99,10 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
         self.object = form.save()
         return JsonResponse({'status': 'success', 'message': 'Comment updated successfully.'})
     
+    def handle_no_permission(self):
+        if not self.request.user.is_authenticated():
+            return JsonResponse({'status': 'error', 'message': 'You must be logged in to update a comment.'}, status=403)
+        
     def form_invalid(self, form):
         return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
     
