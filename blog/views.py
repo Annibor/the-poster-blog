@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.views.generic import UpdateView
+from django.urls import reverse
 from django.views import View
 from django.views import generic
 from django.contrib import messages
@@ -91,24 +92,54 @@ class CommentCreate(View):
             # If the form is invalid, redirect back to the blog's main page
             return redirect('blog:blog')
         
-
+        
 class CommentUpdate(LoginRequiredMixin, UpdateView):
     model = Comment
-    fields = ['body']
-    
+    form_class = CommentForm
+    pk_url_kwarg = 'comment_id'  # URL kwarg as defined in urls.py
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handle POST requests: This method is called when a user submits the form.
+        """
+        self.object = self.get_object()
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
     def form_valid(self, form):
-        self.object = form.save()
-        return JsonResponse({'status': 'success', 'message': 'Comment updated successfully.'})
-    
+        """
+        If the form is valid, save the associated model and redirect to the detail view.
+        """
+        form.save()
+        messages.success(self.request, 'Comment updated successfully!')
+        return redirect(self.get_success_url())
+
     def form_invalid(self, form):
-        return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
-    
-    def test_func(self):
-        comment = self.get_object()
-        return self.request.user == comment.author
+        """
+        If the form is invalid, redirect to the post detail page, showing validation errors.
+        """
+        messages.error(self.request, 'Error updating the comment.')
+        return redirect(self.get_success_url())
 
+    def get_success_url(self):
+        """
+        Return the URL to redirect to after processing a valid form.
+        """
+        post_slug = self.kwargs.get('slug')  # Assuming 'post_slug' is passed in URLconf
+        return reverse('blog:post_detail', kwargs={'slug': post_slug})
 
-
+    def get_object(self, queryset=None):
+        """
+        Ensure that only the comment belonging to the given post can be updated.
+        Override to use 'comment_id' from URL kwargs to fetch the correct object.
+        """
+        comment_id = self.kwargs.get(self.pk_url_kwarg)
+        post_slug = self.kwargs.get('post_slug')  # Assuming 'post_slug' is passed in URLconf
+        comment = get_object_or_404(Comment, id=comment_id, post__slug=post_slug)
+        return comment
         
 
 class LikePost(LoginRequiredMixin, View):
