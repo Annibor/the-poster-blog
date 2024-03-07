@@ -1,18 +1,22 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
+  """
+     A model representing a category for organizing blog posts.
+   Attributes:
+       name: The name of the category.
    """
-      A model representing a category for organizing blog posts.
-
-    Attributes:
-        name: The name of the category.
-    """
-   name = models.CharField(max_length=40)
-
-   class Meta:
+  name = models.CharField(max_length=40)
+  def __str__(self):
+       return self.name
+  
+  def get_absolute_url(self):
+        return reverse('blog')
+  class Meta:
         verbose_name_plural = "categories"
         
 STATUS = (

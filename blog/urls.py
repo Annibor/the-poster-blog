@@ -1,5 +1,4 @@
-from . import views
-from .views import PostList, PostDetail, CommentCreate, LikePost
+from .views import PostList, PostDetail, CommentCreate, LikePost, CategoryPost
 from django.urls import path
 from .views import CommentUpdate
 
@@ -11,4 +10,5 @@ urlpatterns = [
     path('post/<slug:slug>/comment/', CommentCreate.as_view(), name='comment_create'),
     path('post/<slug:slug>/like/', LikePost.as_view(), name='like_post'),
     path('post/<slug:slug>/comment/<int:comment_id>/', CommentUpdate.as_view(), name='comment_update'),
+    path('category/<str:category>/', CategoryPost.as_view(), name='category_posts'),
 ]

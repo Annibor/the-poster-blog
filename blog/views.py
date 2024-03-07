@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, ListView
 from django.views import View
 from django.views import generic
 from django.contrib import messages
@@ -141,3 +141,25 @@ class LikePost(LoginRequiredMixin, View):
             like.delete()
 
         return redirect('blog:blog')
+    
+
+class CategoryPost(ListView):
+    model = Post
+    template_name = "blog/category.html"
+    context_object_name = "posts"
+
+    def get_queryset(self):
+        """
+        Override the default queryset to filter posts by category.
+        Orders the posts by date.
+        """
+        category = self.kwargs['category']  # Retrieve the category from URL parameters
+        return Post.objects.filter(categories__name__contains=category).order_by("-created_on")
+
+    def get_context_data(self, **kwargs):
+        """
+        Override the default context data to add the category to the context.
+        """
+        context = super().get_context_data(**kwargs)
+        context['category'] = self.kwargs['category']
+        return context
