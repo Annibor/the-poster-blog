@@ -86,7 +86,11 @@
                       <p class="approval">This comment is awaiting approval</p>
                       {% endif %}
                       {% if user == comment.author %}
-                      <button type="button" class="btn btn-small btn-primary edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
+                      <div>{{ comment.body }}</div>
+                      {% if user == comment.author %}
+                      <a href="{% url 'blog:comment_edit' pk=comment.pk %}">Edit</a>
+                      <a href="{% url 'blog:comment_delete' pk=comment.pk %}">Delete</a>
+                      {% endif %}
                       {% endif %}
                     </div>
                     {% endfor %}
