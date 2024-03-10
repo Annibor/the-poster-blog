@@ -108,6 +108,21 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
         """Redirect back to the post detail page after comment update."""
         comment = self.get_object()
         return reverse_lazy('blog:post_detail', kwargs={'slug': comment.post.slug})
+    
+
+class CommentDelete(LoginRequiredMixin, DeleteView):
+    model = Comment
+    template_name = 'blog/delete_comment.html'  # Create this template
+
+    def get_queryset(self):
+        """Ensure only the comment owner can delete it."""
+        base_qs = super(CommentDelete, self).get_queryset()
+        return base_qs.filter(author=self.request.user)
+
+    def get_success_url(self):
+        """Redirect back to the post detail page after comment deletion."""
+        comment = self.get_object()
+        return reverse_lazy('blog:post_detail', kwargs={'slug': comment.post.slug})
 
         
 
