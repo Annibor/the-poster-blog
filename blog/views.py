@@ -107,7 +107,7 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         """Redirect back to the post detail page after comment update."""
         comment = self.get_object()
-        return reverse_lazy('blog:post_detail', kwargs={'slug': comment.post.slug})
+        return reverse_lazy('blog:blog')
     
 
 class CommentDelete(LoginRequiredMixin, DeleteView):
@@ -122,7 +122,7 @@ class CommentDelete(LoginRequiredMixin, DeleteView):
     def get_success_url(self):
         """Redirect back to the post detail page after comment deletion."""
         comment = self.get_object()
-        return reverse_lazy('blog:post_detail', kwargs={'slug': comment.post.slug})
+        return reverse_lazy('blog:blog')
 
         
 
