@@ -1,22 +1,42 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.urls import reverse
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
 
 
 class Category(models.Model):
-  """
-     A model representing a category for organizing blog posts.
-   Attributes:
-       name: The name of the category.
-   """
-  name = models.CharField(max_length=40)
-  def __str__(self):
-       return self.name
-  
-  def get_absolute_url(self):
-        return reverse('blog')
-  class Meta:
+    """
+    Represents a category for categorizing posts. Each category has a unique name and a corresponding slug.
+
+    Attributes:
+        name (CharField): The name of the category. Must be unique.
+        slug (SlugField): A slugified version of the category name. It's used in URLs.
+    """
+    name = models.CharField(max_length=80, unique=True)
+    slug = models.SlugField(max_length=80, unique=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        """
+        Overrides the default save method to automatically generate a slug from the category name if not provided.
+        """
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
+
+    def __str__(self):
+        """
+        Returns the string representation of the Category, which is its name.
+        """
+
+        return self.name
+
+    class Meta:
+        """
+        Meta options for the Category model.
+        
+        Attributes:
+            verbose_name_plural (str): The plural name for the category. Used in the Django admin.
+        """
         verbose_name_plural = "categories"
         
 STATUS = (
