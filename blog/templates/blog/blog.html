@@ -40,7 +40,7 @@
             <div class="cat-style">
               <div>
                 {% for category in post.categories.all %} {% if category.name %}
-                <a href="{% url 'category_posts' category.name  %}">
+                <a href="{% url 'blog:category_posts' category.slug  %}">
                   {{ category.name }}
                 </a>
                 {% endif %} {% endfor %}

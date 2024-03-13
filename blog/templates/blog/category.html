@@ -2,3 +2,39 @@
 {% block title %} Category {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
+<div class="container">
+  <h2>Posts in "{{ category.name }}"</h2>
+  <div class="row">
+    {% for post in posts %}
+    <div class="col-md-6 col-lg-7 col-xl-7">
+      <div class="heading-div">
+        <h4 class="date">{{ post.created_on.date }}</h4>
+        <h2>{{ post.title }}</h2>
+      </div>
+      {% if user.is_authenticated %}
+      <div class="post-content">{{ post.post_content | safe }}</div>
+      {% else %}
+      <div class="post-content">{{ post.post_content | truncatewords:45 |safe }}</div>
+      <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
+      {% endif %}
+    </div>
+    <div class="likes-comments">
+      <i class="far fa-comments"></i> {{ post.approved_comments_count }}
+      <i class="fas fa-heart"></i> {{ post.post_likes.count }}
+    </div>
+    <div class="cat-style">
+      <div>
+        {% for category in post.categories.all %} {% if category.name %}
+        <a href="{% url 'blog:category_posts' category.slug  %}">
+          {{ category.name }}
+        </a>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+    <div>
+    {% empty %}
+      <p>No posts found in this category.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

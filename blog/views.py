@@ -7,7 +7,7 @@ from django.views import generic
 from django.contrib import messages
 from django.db.models import Count, Q
 from django.views.generic.detail import DetailView
-from .models import Post, Like, Comment
+from .models import Post, Like, Comment, Category
 from .forms import CommentForm
 
 
@@ -143,23 +143,17 @@ class LikePost(LoginRequiredMixin, View):
         return redirect('blog:blog')
     
 
-class CategoryPost(ListView):
+class CategoryPosts(ListView):
     model = Post
-    template_name = "blog/category.html"
-    context_object_name = "posts"
+    template_name = 'blog/category.html'
+    context_object_name = 'posts'
 
     def get_queryset(self):
-        """
-        Override the default queryset to filter posts by category.
-        Orders the posts by date.
-        """
-        category = self.kwargs['category']  # Retrieve the category from URL parameters
-        return Post.objects.filter(categories__name__contains=category).order_by("-created_on")
+        """Override to filter posts by category based on slug in URL."""
+        return Post.objects.filter(categories__slug=self.kwargs['slug'])
 
     def get_context_data(self, **kwargs):
-        """
-        Override the default context data to add the category to the context.
-        """
+        """Add category to context."""
         context = super().get_context_data(**kwargs)
-        context['category'] = self.kwargs['category']
+        context['category'] = Category.objects.get(slug=self.kwargs['slug'])
         return context
