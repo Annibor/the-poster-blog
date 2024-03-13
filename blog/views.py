@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, ListView
 from django.views import View
 from django.views import generic
 from django.contrib import messages
 from django.db.models import Count, Q
 from django.views.generic.detail import DetailView
-from .models import Post, Like, Comment
+from .models import Post, Like, Comment, Category
 from .forms import CommentForm
 
 
@@ -141,3 +141,19 @@ class LikePost(LoginRequiredMixin, View):
             like.delete()
 
         return redirect('blog:blog')
+    
+
+class CategoryPosts(ListView):
+    model = Post
+    template_name = 'blog/category.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        """Override to filter posts by category based on slug in URL."""
+        return Post.objects.filter(categories__slug=self.kwargs['slug'])
+
+    def get_context_data(self, **kwargs):
+        """Add category to context."""
+        context = super().get_context_data(**kwargs)
+        context['category'] = Category.objects.get(slug=self.kwargs['slug'])
+        return context
