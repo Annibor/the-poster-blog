@@ -9,6 +9,7 @@ from django.db.models import Count, Q
 from django.views.generic.detail import DetailView
 from .models import Post, Like, Comment, Category
 from .forms import CommentForm
+import json
 
 
 # Create your views here.
@@ -91,33 +92,51 @@ class CommentCreate(View):
             return redirect('blog:blog')
         
 
-class CommentUpdate(LoginRequiredMixin, UpdateView):
-    model = Comment
-    fields = ['body']
+class CommentUpdate(LoginRequiredMixin, View):
+    """
+    A view that handles updating an existing comment. This view checks if the
+    user is authenticated and authorized to edit the comment before updating it.
+    
+    Inherits from:
+    - LoginRequiredMixin: Ensures that the user is authenticated.
+    - View: A basic class-based view provided by Django.
+    """
+    
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests. It updates a comment's body with the new content provided by the user.
 
-    def get_object(self, queryset=None):
-        
-        post_slug = self.kwargs.get('post_slug')
-        post = get_object_or_404(Post, slug=post_slug)
+        Args:
+            request: The HttpRequest object.
+            *args: Variable length argument list.
+            **kwargs: Arbitrary keyword arguments.
 
-        
+        Returns:
+            JsonResponse: A JSON response indicating the success or failure of the operation.
+        """
         comment_id = self.kwargs.get('comment_id')
-        return get_object_or_404(Comment, id=comment_id, post=post)
-    
-    def form_valid(self, form):
-        self.object = form.save()
-        return JsonResponse({'status': 'success', 'message': 'Comment updated successfully.'})
-    
-    def handle_no_permission(self):
-        if not self.request.user.is_authenticated():
-            return JsonResponse({'status': 'error', 'message': 'You must be logged in to update a comment.'}, status=403)
-        
-    def form_invalid(self, form):
-        return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
-    
-    def test_func(self):
-        comment = self.get_object()
-        return self.request.user == comment.author
+        comment = get_object_or_404(Comment, id=comment_id)
+
+        # Check if the current user is the author of the comment.
+        if comment.author != request.user:
+            return JsonResponse({'status': 'error', 'message': 'Permission denied'}, status=403)
+
+        # Decode the JSON data from the request body.
+        data = json.loads(request.body.decode('utf-8'))
+        # Extract the 'body' field from the JSON data, stripping any leading/trailing whitespace.
+        body = data.get('body', '').strip()
+
+        # Check if the body is not empty.
+        if not body:
+            return JsonResponse({'status': 'error', 'message': 'Comment body cannot be empty'}, status=400)
+
+        # Update the comment's body with the new content.
+        comment.body = body
+        # Save the updated comment object to the database.
+        comment.save()
+
+        # Return a success response.
+        return JsonResponse({'status': 'success', 'message': 'Comment updated successfully'})
 
 
 
