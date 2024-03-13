@@ -99,34 +99,45 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+});
 
-    document.querySelectorAll(".delete-comment-btn").forEach((button) => {
-        button.addEventListener("click", function () {
-            const commentId = this.dataset.commentId;
-            const postSlug = this.getAttribute("data-post-slug");
-            
-            console.log(`Attempting to delete comment ID: ${commentId}`);
-            
-            if (confirm("Are you sure you want to delete this comment?")) {
-              fetch(`/blog/post/${postSlug}/comment/${commentId}/delete/`, {
-                method: "POST",
-                headers: {
-                  "X-CSRFToken": getCSRFToken(),
-                  "Content-Type": "application/json",
-                },
-              })
-                .then((response) => {
-                  console.log("Delete response status:", response.status);
-                  if (response.ok) {
-                    console.log(document.getElementById(`comment${commentId}`));
-                    document.getElementById(`comment${commentId}`).remove();
-                    console.log(document.getElementById(`comment${commentId}`));
-                  } else {
-                    alert("There was an error. Please try again.");
-                  }
-                })
-                .catch((error) => console.error("Error:", error));
-            }
-        });
+/* Iterates over each "delete comment" button and attaches an event listener */
+document.querySelectorAll(".delete-comment-btn").forEach((button) => {
+    button.addEventListener("click", function () {
+        /* Retrieves the comment ID and post slug stored in the button's data attributes */
+        const commentId = this.dataset.commentId;
+        const postSlug = this.getAttribute("data-post-slug");
+        
+        /* Logs an attempt to delete the comment */
+        console.log(`Attempting to delete comment ID: ${commentId}`);
+        
+        /* Confirms with the user if they really want to delete the comment */
+        if (confirm("Are you sure you want to delete this comment?")) {
+          /* Sends a fetch request to the server to delete the comment */
+          fetch(`/blog/post/${postSlug}/comment/${commentId}/delete/`, {
+            method: "POST",
+            headers: {
+              "X-CSRFToken": getCSRFToken(), /* Includes CSRF token for security */
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => {
+              /* Logs the HTTP status of the response */
+              console.log("Delete response status:", response.status);
+              if (response.ok) {
+                /* If the response is OK, remove the comment's DOM element */
+                console.log(document.getElementById(`comment${commentId}`));
+                document.getElementById(`comment-container${commentId}`).remove();
+                console.log(document.getElementById(`comment${commentId}`)); // This will log null since the element is removed
+              } else {
+                /* Alerts the user if there was a server-side error */
+                alert("There was an error. Please try again.");
+              }
+            })
+            .catch((error) => {
+              /* Logs any error that occurred during the fetch operation */
+              console.error("Error:", error);
+            });
+        }
     });
 });

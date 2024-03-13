@@ -80,7 +80,8 @@
                     {% if post.comments.all %}
                     <!-- Loop through comments and display them -->
                     {% for comment in post.comments.all %}
-                    <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none {% endif %}">
+                    <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none
+                    {% endif %}"" id="comment-container{{ comment.id }}">
                       <p class="font-weight-bold">
                         {{ comment.author }}
                         <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
@@ -98,7 +99,7 @@
                         </button>
                       {% endif %}
                       <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
-                        <textarea class="form-control" id="edit-body-{{ comment.id }}">{{ comment.body }}
+                        <textarea class="form-control">{{ comment.body }}
                         </textarea>
                         <button class="btn btn-success save-edit-btn" data-comment-id="{{ comment.id }}">
                           Save
