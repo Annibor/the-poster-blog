@@ -93,6 +93,9 @@
                       {% endif %}
                       {% if user == comment.author %}
                       <button type="button" class="btn btn-small btn-primary edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
+                      <button class="btn delete-comment-btn" data-post-slug="{{ post.slug }}" data-comment-id="{{ comment.id }}">
+                        Delete
+                        </button>
                       {% endif %}
                       <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
                         <textarea class="form-control" id="edit-body-{{ comment.id }}">{{ comment.body }}

@@ -99,4 +99,34 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+
+    document.querySelectorAll(".delete-comment-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+            const commentId = this.dataset.commentId;
+            const postSlug = this.getAttribute("data-post-slug");
+            
+            console.log(`Attempting to delete comment ID: ${commentId}`);
+            
+            if (confirm("Are you sure you want to delete this comment?")) {
+              fetch(`/blog/post/${postSlug}/comment/${commentId}/delete/`, {
+                method: "POST",
+                headers: {
+                  "X-CSRFToken": getCSRFToken(),
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((response) => {
+                  console.log("Delete response status:", response.status);
+                  if (response.ok) {
+                    console.log(document.getElementById(`comment${commentId}`));
+                    document.getElementById(`comment${commentId}`).remove();
+                    console.log(document.getElementById(`comment${commentId}`));
+                  } else {
+                    alert("There was an error. Please try again.");
+                  }
+                })
+                .catch((error) => console.error("Error:", error));
+            }
+        });
+    });
 });

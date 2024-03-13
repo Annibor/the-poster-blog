@@ -139,7 +139,13 @@ class CommentUpdate(LoginRequiredMixin, View):
         return JsonResponse({'status': 'success', 'message': 'Comment updated successfully'})
 
 
+class CommentDelete(LoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        comment_id = self.kwargs.get('comment_id')
+        comment = get_object_or_404(Comment, id=comment_id)
 
+        comment.delete()
+        return JsonResponse({'status': 'success', 'message': 'Comment deleted successfully'})
         
 
 class LikePost(LoginRequiredMixin, View):
