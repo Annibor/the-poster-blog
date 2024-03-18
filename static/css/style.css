@@ -235,6 +235,34 @@ h2 {
   cursor: pointer;
 }
 
+/* -- Page btns & numbers -- */
+
+.pagination-lg .page-link {
+  background-color: #A25058;
+  border: none;
+  color: #fff; 
+  transition: background-color 0.2s;
+}
+
+/* Active page item */
+.pagination-lg .page-item.active .page-link {
+  background-color: rgba(193, 102, 107, 1.0); 
+  border-color: rgba(193, 102, 107, 1.0);
+}
+
+/* Page item on hover */
+.pagination-lg .page-item .page-link:hover {
+  background-color: rgba(193, 102, 107, 0.8);
+  border-color: rgba(193, 102, 107, 0.8);
+}
+
+/* 'Previous' and 'Next' buttons */
+.pagination-lg .page-item .page-link[aria-label="Previous"],
+.pagination-lg .page-item .page-link[aria-label="Next"] {
+  background-color: #fff; 
+  color: #C1666B;
+}
+
 /* -----------------------*/
 /* --- SIGNUP.HTML --- */
 /* -----------------------*/
