@@ -172,6 +172,9 @@ class CategoryPosts(ListView):
     model = Post
     template_name = 'blog/category.html'
     context_object_name = 'posts'
+    # Limits the number of posts displayed on a single page.
+    paginate_by = 6
+
 
     def get_queryset(self):
         """Override to filter posts by category based on slug in URL."""
