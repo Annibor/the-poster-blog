@@ -31,14 +31,14 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="background-color text-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-11 col-xl-2">
+    <header class="background-color text-light" id="header">
+      <div class="container ">
+        <div class="row align-items-center py-5">
+          <div class="col-6 col-md-4 col-xl-2">
             <h1 class="mb-0">The poster blog</h1>
           </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="navbar navbar-expand-lg jusify-content-end">
+          <div class="col-md-8 d-none d-md-block">
+            <nav class="navbar navbar-expand-md justify-content-end">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'starting_page' %}">Home</a>
@@ -78,13 +78,13 @@
             </nav>
           </div>
           
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3 ">
+          <div class="col-6 col-md-4 d-md-none d-flex justify-content-end">
             <a
               href="#"
-              class="navbar-toggler text-white active"
+              class="navbar-toggler burger-icon text-white active"
               data-toggle="collapse"
               data-target="#navbarNav">
-              <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+              <span class="navbar-toggler-icon"><i class="fa-solid  fa-bars"></i></span>
             </a>
           </div>
         </div>
