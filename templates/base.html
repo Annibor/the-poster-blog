@@ -136,7 +136,7 @@
     </div>
     <main>
       {% if user.is_authenticated %}
-      <p class="text-end m-2">Welcome back {{ user }}</p>
+      <p class="text-end background-color text-light m-0 p-2">Welcome back {{ user }}</p>
       {% else %}
       <p class="text-end m-2">You are not logged in</p>
       {% endif %} {% block content %} {% endblock %}

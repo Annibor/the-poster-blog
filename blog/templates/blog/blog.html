@@ -4,16 +4,15 @@
 {% load crispy_forms_tags %}
 
 
-<div class="">
-  <div class="background-color text-light" >
-    <div class="row align-items-center text-center justify-content-center p-5">
-      <h2>Blog posts</h2>
-    </div>
-  </div>
-</div>
 <section class="background-color" >
   <div class="background-gradient">
     <div class="px-1">
+      <div class="text-light" >
+        <div class="row align-items-center text-center justify-content-center p-5">
+          <h2 class="mt-5">Blog posts</h2>
+          <p class="p-2">Welcome to the blog page, where you can find all the blogposts.</p>
+        </div>
+      </div>
       <div class="row">
         {% for post in post_list %}
         <div class="col-md-12 mb-4 mx-auto">
@@ -34,34 +33,35 @@
                 <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
                 {% endif %}
               </div>
-              <div class="likes-comments mb-2">
-                <i class="far fa-comments mb-2"></i> {{ post.approved_comments_count }}
-                <i class="fas fa-heart mb-2"></i> {{ post.post_likes.count }}
+              <div class="likes-comments px-5 mb-2">
+                <div><i class="far fa-comments mb-2"></i> {{ post.approved_comments_count }}</div>
+                <div><i class="fas fa-heart mb-2"></i> {{ post.post_likes.count }}</div>
               </div>
-              <div class="cat-style">
-                <div>
-                  {% for category in post.categories.all %} {% if category.name %}
-                  <a href="{% url 'blog:category_posts' category.slug  %}">
-                    {{ category.name }}
-                  </a>
-                  {% endif %} {% endfor %}
+              <div class="category-like">
+                <div class="cat-style px-5">
+                  <div>
+                    {% for category in post.categories.all %} {% if category.name %}
+                    <a href="{% url 'blog:category_posts' category.slug  %}">
+                      {{ category.name }}
+                    </a>
+                    {% endif %} {% endfor %}
+                  </div>
+                </div>
+                <div class="like-btn">
+                  {% if user.is_authenticated %}
+                <form action="{% url 'blog:like_post' post.slug %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" class="btn">
+                    {% if request.user in post.likes.all %}
+                    <i class="fas fa-heart"></i> Unlike
+                    {% else %}
+                    <i class="far fa-heart"></i> Like
+                    {% endif %}
+                    </button>
+                </form>
+                {% endif %}
                 </div>
               </div>
-              <div>
-                {% if user.is_authenticated %}
-              <form action="{% url 'blog:like_post' post.slug %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="btn">
-                  {% if request.user in post.likes.all %}
-                  <i class="fas fa-heart"></i> Unlike
-                  {% else %}
-                  <i class="far fa-heart"></i> Like
-                  {% endif %}
-                  </button>
-              </form>
-              {% endif %}
-              </div>
-              
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-comments mb-2 mx-auto py-4 btn-font " data-bs-toggle="modal" data-bs-target="#CommentsModal{{ post.id }}">
                 Comments

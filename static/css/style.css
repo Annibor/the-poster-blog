@@ -174,8 +174,8 @@ h2 {
 
 /* -- Blog posts list -- */
 .blog-post-cont {
-  margin: 3rem;
-  border-bottom: 1px solid;
+  margin: 1.4rem;
+  border-radius: 3px;
 }
 
 .date {
@@ -195,16 +195,35 @@ h2 {
   letter-spacing: 0.08rem;
   text-transform: uppercase;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 .cat-style {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.08rem;
   color: #999;
+  
 }
 
 .post-content {
   font-size: 1.6rem;
+}
+
+.category-like{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+}
+
+.like-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  font-size: 1.8;
+  padding-right: 1rem;
 }
 
 .btn-comments {
