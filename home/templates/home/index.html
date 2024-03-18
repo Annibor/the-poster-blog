@@ -31,9 +31,10 @@
 <section class="background-color">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 mt-5">
+        <h2 class="text-light mb-4 text-center">Latest Post</h2>
         {% if latest_post %}
-        <div>
+        <div class="post-background">
           <h2>{{ latest_post.title }}</h2>
           <p>{{ latest_post_content | safe }}</p>
           <a href="{% url 'blog:post_detail' slug=latest_post.slug %}">Read more</a>
