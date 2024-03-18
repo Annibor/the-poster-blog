@@ -53,7 +53,7 @@ body {
 
 /* -- titles,subtitles -- */
 h2 {
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -63,7 +63,11 @@ h2 {
 }
 
 .background-color {
-  background: #313638
+  background-color:  #C1666B;
+}
+
+.background-color-footer {
+  background-color: #A25058;
 }
 
 .background-posts {
@@ -90,7 +94,7 @@ h2 {
 }
 
 .hero-text-div {
-  margin-top: 5rem;
+  margin-top: 8rem;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -104,6 +108,8 @@ h2 {
 
 .hero-h3 {
   font-size: 2.8rem;
+  text-transform: uppercase;
+  text-align: end;
 }
 
 .hero-p {
