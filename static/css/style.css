@@ -292,6 +292,33 @@ h2 {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
+.signin-h2 {
+  text-transform: uppercase;
+  color:rgba(129,64,70);
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+/* ----TRY MKAE IT WORK ------
+.input-field {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.input-field::placeholder {
+  color: #313638;
+  opacity: 1;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(193, 102, 107, 0.5);
+}    ---- */
+
 .btn-form {
   background-color: rgba(162, 80, 88, 0.9);
   color: white;
