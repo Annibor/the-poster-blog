@@ -40,8 +40,8 @@
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <div class="form-outline mb-4">
-                  <input type="hidden" class="input-field" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"  />
-                  <input type="text" id="username" name="username" class="form-control input-field form-control-lg" placeholder="{% trans 'Name' %}" required />
+                  <input type="hidden" class="form-control form-control-lg" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"  />
+                  <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="{% trans 'Name' %}" required />
                   <label class="form-label" for="username">{% trans "Username" %}</label>
                   {% endif %}
                 </div>
