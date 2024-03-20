@@ -71,11 +71,11 @@ h2 {
 }
 
 .background-color {
-  background-color:  #C1666B;
+  background-color: #c1666b;
 }
 
 .background-color-footer {
-  background-color: #A25058;
+  background-color: #a25058;
 }
 
 .background-posts {
@@ -91,7 +91,6 @@ h2 {
   border-radius: 3px;
   padding: 2rem;
   opacity: 0.9;
-
 }
 
 /* -----------------------*/
@@ -122,7 +121,7 @@ h2 {
 }
 
 .nav-link:hover {
-  color:#fedd97;
+  color: #fedd97;
 }
 
 .nav-link:active,
@@ -130,12 +129,11 @@ h2 {
   font-size: 2rem;
 }
 
-
 /* -----------------------*/
 /* --- INDEX.HTML --- */
 /* -----------------------*/
-.hero { 
-  height: 65rem;
+.hero {
+  height: 80vh;
   background-size: cover;
   background-position: center;
 }
@@ -143,18 +141,21 @@ h2 {
 .overlay {
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 80%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 80%
+  );
   opacity: 0.8;
 }
 
 .hero-div {
-  margin-top: 8rem;
+  margin-top: 6rem;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.4); 
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .hero-text-div {
-  
   justify-content: center;
   display: flex;
   align-items: center;
@@ -165,13 +166,13 @@ h2 {
 }
 
 .hero-arrow {
- font-size: 3rem;
- justify-content: center;
- text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  font-size: 3rem;
+  justify-content: center;
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .hero-h2 {
-  color:rgba(193, 102, 107, 1.0); 
+  color: rgba(193, 102, 107, 1);
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
 }
@@ -180,17 +181,23 @@ h2 {
   font-size: 2.8rem;
   text-transform: uppercase;
   text-align: end;
-  color:rgba(193, 102, 107, 1.0);
+  color: rgba(193, 102, 107, 1);
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .hero-p {
   font-size: 2rem;
   letter-spacing: 1px;
-  color:rgba(193, 102, 107, 1.0); ;
+  color: rgba(193, 102, 107, 1);
   font-weight: 300;
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-  
+}
+
+/* -- Latest posts -- */
+.latest-post-h2 {
+  font-size: 4.4rem;
+  letter-spacing: 2px;
+  margin: 3rem 1rem;
 }
 
 /* -----------------------*/
@@ -198,7 +205,11 @@ h2 {
 /* -----------------------*/
 
 .background-gradient {
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
   opacity: 0.8;
 }
 
@@ -234,18 +245,16 @@ h2 {
   font-size: 0.8rem;
   letter-spacing: 0.08rem;
   color: #999;
-  
 }
 
 .post-content {
   font-size: 1.6rem;
 }
 
-.category-like{
+.category-like {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-
 }
 
 .like-btn {
@@ -268,16 +277,16 @@ h2 {
 /* -- Page btns & numbers -- */
 
 .pagination-lg .page-link {
-  background-color: #A25058;
+  background-color: #a25058;
   border: none;
-  color: #fff; 
+  color: #fff;
   transition: background-color 0.2s;
 }
 
 /* Active page item */
 .pagination-lg .page-item.active .page-link {
-  background-color: rgba(193, 102, 107, 1.0); 
-  border-color: rgba(193, 102, 107, 1.0);
+  background-color: rgba(193, 102, 107, 1);
+  border-color: rgba(193, 102, 107, 1);
 }
 
 /* Page item on hover */
@@ -289,15 +298,19 @@ h2 {
 /* 'Previous' and 'Next' buttons */
 .pagination-lg .page-item .page-link[aria-label="Previous"],
 .pagination-lg .page-item .page-link[aria-label="Next"] {
-  background-color: #fff; 
-  color: #C1666B;
+  background-color: #fff;
+  color: #c1666b;
 }
 
 /* -----------------------*/
 /* --- SIGNIN.HTML --- */
 /* -----------------------*/
 .login-section {
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 80%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 80%
+  );
   min-height: 100vh;
 }
 
@@ -311,7 +324,7 @@ h2 {
 
 .signin-h2 {
   text-transform: uppercase;
-  color:rgba(129,64,70);
+  color: rgba(129, 64, 70);
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
@@ -363,19 +376,52 @@ h2 {
 /* --- MEDIA QUERIES--- */
 /* -----------------------*/
 @media (min-width: 34rem) {
-
   .hero-context {
     margin-top: 5rem;
   }
 
+  .hero-div {
+    margin-top: 12rem;
+  } 
+
+
   .hero-arrow {
     margin-top: 3rem;
   }
+
+  
+
 }
 
 @media (min-width: 44rem) {
   html {
     font-size: 56.25%;
+  }
+
+  .hero-arrow {
+    margin-top: 1rem;
+  }
+
+  .latest-post-div {
+    min-height: 45rem;
+  }
+
+  
+
+  .post-background  {
+    padding: 3rem;
+  }
+
+  .latest-post-p {
+    margin-bottom: 3rem;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-arrow {
+    margin-top: 5rem;
   }
 }
 
@@ -384,8 +430,9 @@ h2 {
     font-size: 62.5%;
   }
 
-  .hero { 
-    height: 60rem;
+  .hero-div {
+    margin: 9rem auto;
+    max-width: 90rem;
   }
 
   .container {
@@ -394,8 +441,7 @@ h2 {
 }
 
 @media (min-width: 75rem) {
-
-  .hero { 
+  .hero {
     height: 100rem;
   }
 }
