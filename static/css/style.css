@@ -193,6 +193,10 @@ h2 {
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
+.post-background {
+  box-shadow: 0rem 0.6rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
 /* -- Latest posts -- */
 .latest-post-h2 {
   font-size: 4.4rem;
@@ -441,7 +445,9 @@ h2 {
 }
 
 @media (min-width: 75rem) {
-  .hero {
-    height: 100rem;
+  .hero-text-div {
+    padding: 5rem;
+    margin: 3rem;
   }
+
 }
