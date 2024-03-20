@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+<div class="four-o-four-container">
+    <h2 class="four-o-four-header">Oops! Page not found.</h2>
+    <p>We can't seem to find the page you're looking for.</p>
+    <p>But don't worry, here's a little art to brighten your day:</p>
+    <div class="art-container">
+        here will be some kind of art/img
+    </div>
+    <a href="{% url 'home' %}" class="btn-nav four-o-four-home-btn">Take me home</a>
+</div>
+{% endblock %}
