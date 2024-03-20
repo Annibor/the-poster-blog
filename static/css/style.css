@@ -66,6 +66,10 @@ h2 {
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
+h3 {
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
 .container {
   max-width: 120rem;
 }
@@ -79,18 +83,12 @@ h2 {
 }
 
 .background-posts {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0rem 0.6rem 0.6rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-font {
   font-size: 1.6rem;
-}
-
-.post-background {
-  background-color: #f4f4f4;
-  border-radius: 3px;
-  padding: 2rem;
-  opacity: 0.9;
 }
 
 /* -----------------------*/
@@ -194,6 +192,10 @@ h2 {
 }
 
 .post-background {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  padding: 2rem;
+  opacity: 0.9;
   box-shadow: 0rem 0.6rem 0.6rem rgba(0, 0, 0, 0.2);
 }
 
@@ -215,6 +217,11 @@ h2 {
     rgba(253, 187, 45, 1) 100%
   );
   opacity: 0.8;
+}
+
+.blog-h2 {
+  font-size: 4.4rem;
+  margin: 4rem 0 2rem 0 ;
 }
 
 /* -- Blog posts list -- */
@@ -263,12 +270,14 @@ h2 {
 
 .like-btn {
   cursor: pointer;
-  display: flex;
-  justify-content: end;
-  font-size: 1.8;
   padding-right: 1rem;
 }
 
+.heart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .btn-comments {
   color: white;
   background-color: rgba(193, 102, 107, 0.7);
@@ -410,8 +419,6 @@ h2 {
     min-height: 45rem;
   }
 
-  
-
   .post-background  {
     padding: 3rem;
   }
@@ -426,6 +433,23 @@ h2 {
 
   .hero-arrow {
     margin-top: 5rem;
+  }
+
+  /* -- Blogpage -- */
+  .blog-post-cont {
+    padding: 1.5rem;
+  }
+
+  .post-title {
+    padding-top: 2rem;
+  }
+
+  .icons {
+    font-size: 1.6rem;
+  }
+
+  .like-btn {
+    font-size: 1.6rem;
   }
 }
 

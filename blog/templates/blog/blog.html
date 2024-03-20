@@ -9,8 +9,8 @@
     <div class="container">
       <div class="text-light" >
         <div class="row align-items-center text-center justify-content-center p-5">
-          <h2 class="mt-5">Blog posts</h2>
-          <p class="p-2">Welcome to the blog page, where you can find all the blogposts.</p>
+          <h2 class="blog-h2">Blog posts</h2>
+          <h3 class="p-2">Welcome to the blog page, where you can find all the blogposts.</h3>
         </div>
       </div>
       <div class="row">
@@ -18,13 +18,13 @@
         <div class="col-md-12 mb-4 mx-auto">
           <div class="blog-post-cont background-posts">
             <div class="row">
-              <div class="col-md-6 col-lg-5 col-xl-5 d-flex">
+              <div class="col-xl-5 d-flex">
                 <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" />
               </div>
-              <div class="col-md-6 col-lg-7 col-xl-7">
+              <div class="col-xl-7">
                 <div class="heading-div mx-auto p-4 ">
                   <h4 class="date">{{ post.created_on.date }}</h4>
-                  <h2>{{ post.title }}</h2>
+                  <h2 class="post-title">{{ post.title }}</h2>
                 </div>
                 {% if user.is_authenticated %}
                 <div class="post-content mx-auto p-4">{{ post.post_content | safe }}</div>
@@ -33,7 +33,7 @@
                 <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
                 {% endif %}
               </div>
-              <div class="likes-comments px-5 mb-2">
+              <div class="likes-comments icons px-5 mb-2">
                 <div><i class="far fa-comments mb-2"></i> {{ post.approved_comments_count }}</div>
                 <div><i class="fas fa-heart mb-2"></i> {{ post.post_likes.count }}</div>
               </div>
@@ -51,11 +51,11 @@
                   {% if user.is_authenticated %}
                 <form action="{% url 'blog:like_post' post.slug %}" method="post">
                   {% csrf_token %}
-                  <button type="submit" class="btn">
+                  <button type="submit" class="btn d-grid gap-1 like-btn btn-lg">
                     {% if request.user in post.likes.all %}
-                    <i class="fas fa-heart"></i> Unlike
+                    <i class="fas heart-icon fa-heart"></i> Unlike
                     {% else %}
-                    <i class="far fa-heart"></i> Like
+                    <i class="far heart-icon fa-heart"></i> Like
                     {% endif %}
                     </button>
                 </form>
@@ -94,7 +94,7 @@
                         <p class="approval">This comment is awaiting approval</p>
                         {% endif %}
                         {% if user == comment.author %}
-                        <button type="button" class="btn btn-small btn-primary edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
+                        <button type="button" class="btn btn-comments edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
                         <button class="btn delete-comment-btn" data-post-slug="{{ post.slug }}" data-comment-id="{{ comment.id }}">
                           Delete
                           </button>
@@ -102,7 +102,7 @@
                         <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
                           <textarea class="form-control">{{ comment.body }}
                           </textarea>
-                          <button class="btn btn-success save-edit-btn" data-comment-id="{{ comment.id }}">
+                          <button class="btn btn-comments save-edit-btn" data-comment-id="{{ comment.id }}">
                             Save
                           </button>
                           <button class="btn btn-secondary cancel-edit-btn" data-comment-id="{{ comment.id }}">
@@ -126,7 +126,7 @@
                                     <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{ post.slug }}">
                                       {% csrf_token %}
                                       <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
-                                      <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+                                      <button type="submit" id="submitButton" class="btn btn-comments">Submit</button>
                                     </form>
                                     <div>
                                       {% else %}
