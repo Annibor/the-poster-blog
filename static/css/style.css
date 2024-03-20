@@ -127,6 +127,13 @@ h3 {
   font-size: 2rem;
 }
 
+/* Footer section */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* -----------------------*/
 /* --- INDEX.HTML --- */
 /* -----------------------*/
@@ -226,7 +233,7 @@ h3 {
 
 /* -- Blog posts list -- */
 .blog-post-cont {
-  margin: 1.4rem;
+  margin: 1.4rem 3rem;
   border-radius: 3px;
 }
 
@@ -314,6 +321,8 @@ h3 {
   background-color: #fff;
   color: #c1666b;
 }
+
+
 
 /* -----------------------*/
 /* --- SIGNIN.HTML --- */
