@@ -39,8 +39,19 @@
               <a class="navbar-brand text-light logo" href="{% url 'starting_page' %}"> 
                 <h1 data-testid="brand-name" class="mb-0">The poster blog</h1>
               </a>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+              <div class="d-flex justify-content-end">
+                <button type="button" 
+                  data-bs-toggle="offcanvas"
+                  class="navbar-toggler burger-icon text-white"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"><i class="fa-solid  fa-bars"></i></span>
+                </button>
+              </div>
+              <div  class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav justify-content-end">
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'starting_page' %}">Home</a>
                   </li>
@@ -83,16 +94,54 @@
                   {% endif %}
                 </ul>
               </div>
-              <div class="col-6 col-md-4 d-md-none d-flex justify-content-end">
-                <button type="button" 
-                  data-bs-toggle="collapse"
-                  class="navbar-toggler burger-icon text-white"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" 
-                  aria-expanded="false" 
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"><i class="fa-solid  fa-bars"></i></span>
-                </button>
+              <div class="offcanvas offcanvas-end bg-dark offcanvas-background" tabindex="-1" id="navbarNav" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h3 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Menu</h3>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'starting_page' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="
+                      {% url 'blog:blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <button 
+                      class="btn btn-nav dropdown-toggle" 
+                      data-bs-toggle="dropdown" 
+                      aria-expanded="false">
+                        Categories
+                      </button>
+
+                      <ul class="dropdown-menu">
+                        {% for category in categories %}
+                        <li>
+                          <a class="dropdown-item"
+                          href="{% url 'blog:category_posts' category.slug %}">{{ category.name }}</a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                            href="{% url 'account_login' %}">Login</a>
+                    </li>
+                  {% endif %}
+                </ul>
               </div>
             </nav>
           </div>
