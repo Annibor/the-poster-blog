@@ -95,6 +95,15 @@ h3 {
 /* --- BASE.HTML --- */
 /* -----------------------*/
 
+.logo {
+  h1 {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  }
+
+}
 .btn-nav {
   color: white;
   background-color: rgba(193, 102, 107, 0.7);
