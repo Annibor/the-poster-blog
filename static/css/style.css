@@ -143,16 +143,6 @@ h3 {
   align-items: center;
 }
 
-.social-icon i {
-  font-size: 1.4rem;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
 /* -----------------------*/
 /* --- INDEX.HTML --- */
 /* -----------------------*/
