@@ -95,6 +95,15 @@ h3 {
 /* --- BASE.HTML --- */
 /* -----------------------*/
 
+.logo {
+  h1 {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  }
+}
+
 .btn-nav {
   color: white;
   background-color: rgba(193, 102, 107, 0.7);
@@ -111,7 +120,7 @@ h3 {
 }
 
 .nav-link {
-  color: white;
+  color: #a25058;
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -141,6 +150,10 @@ h3 {
   height: 80vh;
   background-size: cover;
   background-position: center;
+}
+
+.bg-image {
+  background-image: url('static/images/hero-img-blog.jpg')
 }
 
 .overlay {
@@ -233,7 +246,7 @@ h3 {
 
 /* -- Blog posts list -- */
 .blog-post-cont {
-  margin: 1.4rem;
+  margin: 1.4rem 3rem;
   border-radius: 3px;
 }
 
@@ -418,6 +431,10 @@ h3 {
 @media (min-width: 44rem) {
   html {
     font-size: 56.25%;
+  }
+
+  .nav-link {
+    color: #fff;
   }
 
   .hero-arrow {

@@ -52,6 +52,7 @@ class Post(models.Model):
     Attributes:
     title: The title of the post.
     slug: The slug of the post.
+    featured_image: The image of the post.
     post_content: The content of the post.
     created_on: The date and time when the post was created.
     last_modifed: The last time the post was updated or changed.
@@ -59,7 +60,7 @@ class Post(models.Model):
     """
   title = models.CharField(max_length=250, unique=True)
   slug = models.SlugField(max_length=250, unique=True)
-  featured_image = CloudinaryField('image', default='post.title')
+  featured_image = CloudinaryField('image', default='placeholder')
   post_content = models.TextField()
   created_on = models.DateTimeField(auto_now_add=True)
   last_modified = models.DateTimeField(auto_now=True)
