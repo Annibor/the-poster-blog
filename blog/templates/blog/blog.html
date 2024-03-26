@@ -19,12 +19,12 @@
         <div class="col-md-12 mb-4 mx-auto">
           <div class="blog-post-cont background-posts">
             <div class="row">
-              <div class="col-xl-5 d-flex post-img">
+              <div class="col-xl-5 d-flex justify-content-center align-items-center">
                 {% if "placeholder" in post.featured_image.url %}
-                <img class="card-img-top" src="{% static 'images/default.jpeg' %}"
+                <img class="img-fluid" src="{% static 'images/default.jpeg' %}"
                   alt="placeholder image">
                 {% else %}
-                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                <img class="img-fluid" src=" {{ post.featured_image.url }}"
                   alt="{{ post.title }}">
                 {% endif %}
               </div>
