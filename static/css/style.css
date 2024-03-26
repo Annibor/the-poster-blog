@@ -222,6 +222,23 @@ h3 {
   margin: 3rem 1rem;
 }
 
+.latest-post-link a {
+  color:rgba(129, 64, 70);
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: rgba(129, 64, 70, 0.3);
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.latest-post-link a:hover {
+  color: #fedd97;
+  background-color: rgba(129, 64, 70, 0.5);
+}
+
 /* -----------------------*/
 /* --- BLOG.HTML --- */
 /* -----------------------*/
@@ -301,6 +318,11 @@ h3 {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.btn-comments:hover {
+  color: #fedd97;
+  background-color: rgba(193, 102, 107, 0.8);
 }
 
 /* -- Page btns & numbers -- */
