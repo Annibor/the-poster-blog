@@ -121,16 +121,10 @@
       {% else %}
       <p class="text-end m-2">You are not logged in</p>
       {% endif %} 
-      <div class="four-o-four-container">
-        <h2 class="four-o-four-header mt-5">Oops! Page not found.</h2>
-        <p class="mt-5">We can't seem to find the page you're looking for.</p>
-        <p class="mt-2rem">But don't worry, here's a little art to brighten your day:</p>
-        <img
-          src="{% static 'images/404.jpeg' %}"
-          alt="404 image"
-          class="four-o-four-image mt-4"
-        />
-        <a href="{% url 'starting_page' %}" class="btn btn-form mt-2">Back to home</a>
+      <div class="background-color-blog d-flex row justify-content-center align-items-center">
+        <h2 class="mt-5 text-center">Oops! Page not found.</h2>
+        <p class="mt-5 text-center">We can't seem to find the page you're looking for.</p>
+        <a href="{% url 'starting_page' %}" class="btn btn-form m-5">Back to home</a>
       </div>
     </main>
     <footer class="fixed-bottom background-color-footer text-light">
