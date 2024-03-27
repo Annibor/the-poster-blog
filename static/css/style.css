@@ -136,6 +136,23 @@ h3 {
   font-size: 2rem;
 }
 
+.cat-dropdown {
+  color: #a25058;
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cat-dropdown:hover {
+  color: #fedd97;
+}
+
+.cat-dropdown:active,
+.cat-dropdown:visited {
+  font-size: 2rem;
+}
+
 /* Footer section */
 .footer-icons {
   display: flex;
