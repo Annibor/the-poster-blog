@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %} Category {% endblock %}
 {% block content %}
+{% load static %}
 {% load crispy_forms_tags %}
 <section class="background-color">
   <div class="background-gradient">
@@ -14,8 +15,14 @@
       <div class="col-md-12 mb-4 mx-auto">
         <div class="blog-post-cont background-posts">
           <div class="row">
-            <div class="col-md-6 col-lg-5 col-xl-5 d-flex">
-              <p>images for post?</p>
+            <div class="col-xl-5 d-flex justify-content-center align-items-center">
+              {% if "placeholder" in post.featured_image.url %}
+              <img class="img-fluid" src="{% static 'images/default.jpeg' %}"
+                alt="placeholder image">
+              {% else %}
+              <img class="img-fluid" src=" {{ post.featured_image.url }}"
+                alt="{{ post.title }}">
+              {% endif %}
             </div>
             <div class="col-md-6 col-lg-7 col-xl-7">
               <div class="heading-div mx-auto p-4 ">
