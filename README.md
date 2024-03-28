@@ -172,6 +172,15 @@ Future features for the webpage are:
 
 - Throughout the whole development of the webpage, I've made tests in:
 
+### Wc3
+
+- Logout page
+- [Logout page 1](/static/testingimages/wc3-logout-1.png)
+- [Logout page 2](/static/testingimages/wc3-logout-2.png)
+
+- Signup page
+- [Signup page 1](/static/testingimages/wc3-signup-1.png)
+- [Signup page 2](/static/testingimages/wc3-signup-2.png)
 ### DevTools
 
 - Troughout the development I've used Devtools to inspect and test the website to be able to make the best I could for it.
