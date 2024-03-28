@@ -140,6 +140,64 @@ Future features for the webpage are:
 
 I tested the website manualy throughout the whole developing progress. The website is tested in Safari, Google Chrome and Brave. The website is also tested from an Iphone.
 
+### Manual testing
+
+<table>
+ <thead>
+   <tr>
+     <th>Testing Description</th>
+     <th>Expected Action</th>
+     <th>Actual Output</th>
+     <th>Result</th>
+
+   </tr>
+ </thead>
+  <tbody>
+   <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+   <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+    <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+    <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+    <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+    <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+   <tr>
+     <td>Testing description.</td>
+     <td>Expected action.</td>
+     <td>Actual output</td>
+     <td>result</td>
+   </tr>
+  </tbody>
+</table>
+
 ## Deployment
 
 I deployed early to be able to test the website deployed during the development. Following step are a description of how to deploy a webpage on GitHub:
