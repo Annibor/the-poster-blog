@@ -47,18 +47,50 @@ Please note, Izzy is a fictional character created for this school project, and 
 
 ### Project Goals
 
+The primary goal of *The Poster Blog* is to inspire creativity and share knowledge. Izzy aims to:
 
+- Share her artistic journey and the stories behind her creations.
+- Provide insights into the creative process, from concept to completion.
+- Offer tips and tricks for aspiring artists and art lovers.
+- Creating an interactive community where users can engage with content through comments and by liking posts.
+- Providing a welcoming introduction to the blog on the homepage, where visitors can sample the beginning of the latest post.
 
 ### User-Centered Approach
 
+For The Poster Blog, I've prioritize the users' experience above all. The design and development processes are deeply rooted in a user-centered approach, ensuring that the platform is not only visually appealing but also accessible, engaging, and easy to navigate. Here's how I've tailored The Poster Blog to our audience:
+
+**Accessibility**
+- Universal Design: 
+I've implemented a responsive layout that adapts seamlessly across devices and screen sizes, ensuring that all users, regardless of how they access the blog, have a uniform experience.
+
+- Accessibility Features:
+From high-contrast color schemes to keyboard navigation and screen reader compatibility, I've taken steps to make The Poster Blog inclusive for users with diverse accessibility needs.
+
+**Engagement and Interaction**
+- Community Engagement: 
+Users can actively participate in the artistic journey through comments, fostering a vibrant community of art enthusiasts.
+
+- User Feedback:
+We've made it easy for users to like posts, providing immediate feedback to Izzy and allowing her to gauge which topics resonate most with her audience.
+
+**Intuitive Navigation**
+- Streamlined Interface: The blog features a clean, organized layout that guides users naturally through content and minimizing distractions.
+
+- Discoverability: 
+With a clear and concise menu, users can effortlessly find content categories, blog, and more, enhancing their ability to discover new posts and topics of interest.
+
+By placing our users at the heart of The Poster Blog's development, we strive to create an online space that not only showcases Izzy's artistic talent but also builds a supportive and engaged community around her work.
 
 #### As a General user
 
-- 
+- Discover new art and get inspired.
+- Learn about the artistic process and the life of a full-time artist.
+- Follow Izzy troughout her everyday life. 
 
 #### As a New User
 
-- 
+- Get a welcomming introduction to the blog on the homepage,  where visitors can get a sneak peek of the latest post, encouraging deeper exploration into Izzy's world.
+- Get a clear understanding that visitors need to vreate an account and be logged in in order to read the full posts, and to leave comments.
 
 ### Wireframes
 
