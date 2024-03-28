@@ -173,6 +173,25 @@ h3 {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.footer-h3 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  text-align: none;
+  font-weight: 300;
+}
+
+.email {
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  text-align: none;
+  font-weight: 300
+}
+
+
 /* -----------------------*/
 /* --- INDEX.HTML --- */
 /* -----------------------*/
