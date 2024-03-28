@@ -88,7 +88,7 @@
                       <!-- Loop through comments and display them -->
                       {% for comment in post.comments.all %}
                       <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none
-                      {% endif %}"" id="comment-container{{ comment.id }}">
+                      {% endif %}" id="comment-container{{ comment.id }}">
                         <p class="font-weight-bold">
                           {{ comment.author }}
                           <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
