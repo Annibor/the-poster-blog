@@ -34,6 +34,7 @@
               <p>{% blocktrans %}If you have not created an account yet, then please
               <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
               {% endif %}
+              </div>
               
               <form class="login signin-form" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
@@ -48,7 +49,6 @@
                 <a class="btn secondaryAction m-1" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                 <button class="btn btn-form btn-lg text-light" type="submit">{% trans "Sign In" %}</button>
               </form>
-              </div>
             </div>
           </div>
         </div>
