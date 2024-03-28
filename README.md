@@ -20,9 +20,14 @@ Please note, Izzy is a fictional character created for this school project, and 
     - [**Project Goals**](#project-goals)
     - [**Wireframes**](#wireframes)
       - [**Home Page**](#home-page)
+    - [**Design Philosophy/ Features**](#design-philosophy-features)
+      - [**Responsive Design**](#responsive-design)
+      - [**Minimalistic Layout**](#minimalistic-layout)
+      - [**Usability Enhancements**](#usability-enhancements)
+      - [**Future-Proof and Scalable**](#future-proof-and-scalable)
     - [**Colors**](#colors)
     - [**Fonts**](#fonts)
-    - [**Design Philosophy/ Features**](#design-philosophy-features)
+    - [**Features**](#features)
     - [**Future Features**](#future-features)
   - [**Testing**](#testing)
   - [**Devtools**](#devtools)
@@ -100,33 +105,57 @@ I've created my wireframes for the website by using [Balsamiq](https://balsamiq.
 
 
 
-#### **When Task added**
+#### **Blog page**
 
 
 
-#### **Change slide**
-
-- 
-
-#### **Add task**
+#### **Login**
 
 - 
 
-#### **When task is done**
+#### **Register**
 
 - 
 
-#### **Edit button**
+#### **Logout**
 
-- []()
-
-### Colors
-
--
-
-### Fonts
+- 
 
 ### Design Philosophy/ Features
+
+The design philosophy of The Poster Blog is deeply intertwined with its core mission to illuminate the art world for enthusiasts and newcomers alike. By prioritizing simplicity and accessibility, we ensure that Izzy's artwork and insights remain the focal point of every visitor's experience. Here’s an expanded overview of the design features and the thought process behind them, guided by your provided code:
+
+#### **Responsive Design**
+- Fluid Layouts:
+Adapts effortlessly to any screen size, ensuring that every user enjoys a seamless browsing experience, whether on a desktop, tablet, or smartphone. This responsiveness is critical in today's diverse device landscape, allowing Izzy’s art to reach a broader audience without compromise.
+
+#### **Minimalistic Layout**
+- Clutter-Free Interface: 
+Our minimalistic approach emphasizes content over decoration. By employing clean lines and a focused palette, the attention is drawn directly to Izzy's posts and artworks. This design choice reflects the belief that in simplicity, there's beauty and clarity that enhances user engagement.
+
+#### **Usability Enhancements**
+- Navigation and Accessibility: 
+User-friendly navigation is a cornerstone of our design. The intuitive menu system, coupled with accessible design features, ensures that all visitors, regardless of their familiarity with technology or personal accessibility needs, can explore Izzy's blog effortlessly.
+
+Interactive Elements: 
+Through engaging UI components like comment buttons, like icons, and social media links, we encourage visitors to interact with the content. These features are designed to foster a community around Izzy’s work, allowing her insights and creations to spark conversations and connections.
+
+#### **Future-Proof and Scalable**
+- Built to Evolve: 
+The architecture behind The Poster Blog is not just about meeting today's needs but anticipating tomorrow's growth. As Izzy’s career expands and her audience grows, the site is ready to scale, introducing new features and content without losing the essence of its design philosophy.
+In essence, the design of The Poster Blog is a thoughtful blend of aesthetics, functionality, and user experience principles. It serves as a digital canvas that beautifully showcases Izzy’s artistry while ensuring every visitor feels welcomed, inspired, and eager to engage.
+
+### Fonts
+**Typography and Colors**
+- Harmonious Typography:
+The chosen fonts, such as Inter, Lato, and Montserrat, offer a balance between artistic flair and readability. Each font weight and size is meticulously selected to guide the reader's eye through the content, enhancing comprehension without sacrificing aesthetic appeal.
+They are also chosen to make sure the fokus is drawn to Izzy´s blog posts.
+
+### Colors
+- Palette Choices:
+The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complements Izzy's vibrant artwork and creates an inviting atmosphere. These colors are not just background elements but integral parts of the storytelling process, evoking emotions and setting the mood for each post.
+
+### Features
 
 - **Homepage**:
 - ![Homepage Desktop](./docs/screenshots/homepage-desktop.png)
