@@ -1,12 +1,11 @@
+
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <!-- META TAGS FOR SEARCH ENGINES -->
     <meta
       name="description"
@@ -16,7 +15,7 @@
       content="art, creativity, artist blog, inspiration, imagination, storytelling, innovation, visual   arts, painting, drawing, sculpture, mixed media" />
 
     <meta name="author" content="Annika Börgesson" />
-    <title>{% block title %}The Poster Blog{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!--Link to bootstrap -->
     <link
@@ -30,6 +29,7 @@
 
     <!--Css -->
     {% block css_files %}{% endblock %}
+    {% load static %}
   </head>
   <body>
     <!-- HEADER -->
@@ -121,36 +121,39 @@
       <p class="text-end background-color text-light m-0 p-2">Welcome back {{ user }}</p>
       {% else %}
       <p class="text-end m-2">You are not logged in</p>
-      {% endif %} {% block content %} {% endblock %}
+      {% endif %} 
+      <div class="background-color-blog d-flex row justify-content-center align-items-center">
+        <h2 class="mt-5 text-center">Oops!</h2>
+        <p class="mt-5 text-center">500 - our server is on a break</p>
+        <a href="{% url 'starting_page' %}" class="btn btn-form mt-2">Back to home</a>
+      </div>
     </main>
-    <footer class="sticky-bottom background-color-footer text-light">
+    <footer class="fixed-bottom text-center background-color-footer text-light">
       <div class="container pt-4">
         <div class="row mt-3">
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-flex justify-content-center">
-            <h3 class="footer-logo">The poster blog</h3>
-          </div>
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 social-links-div">
-            <div class="mb-4 footer-icons">
+            <section class="mb-4 footer-icons">
               <a
-                target="_blank" href="https://www.facebook.com/" title="Facebook"
+                target="_blank"
+                href="https://www.facebook.com/"
+                title="Facebook"
                 class="btn text-light fs-3 m-1"
                 role="button"
                 rel="noopener"
                 aria-label="link to facebook"
                 ><i class="fab fa-facebook-f"></i>
               </a>
-              <a target="_blank" href="https://www.instagram.com/" title="Instagram"
+              <a
+                target="_blank"
+                href="https://www.instagram.com/"
+                title="Instagram"
                 class="btn text-light fs-3 m-1"
                 role="button"
                 rel="noopener"
                 aria-label="link to instagram"
                 ><i class="fab fa-instagram"></i>
               </a>
-            </div>
-          </div>
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 row d-flex justify-content-center">
-            <h3 class="footer-h3">For collaborations or work, please email me:</h3>
-            <p class="email">posterblog@blog.com</p>
+            </section>
           </div>
         </div>
         <div class="d-flex justify-content-center pt-2">
