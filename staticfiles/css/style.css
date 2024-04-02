@@ -160,37 +160,38 @@ h3 {
 }
 
 /* Footer section */
+.footer-logo {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
 .footer-icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer-logo {
-  color: white;
-  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+.footer-text {
+  font-size: 1.8rem;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.footer-h3 {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  letter-spacing: 0.08rem;
-  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-  text-align: none;
-  font-weight: 300;
 }
 
 .email {
-  font-size: 1.2rem;
-  letter-spacing: 0.08rem;
-  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-  text-align: none;
-  font-weight: 300
+  font-size: 1.6rem;
+  color: #fedd97;
+  letter-spacing: 1.1px;
+  margin: 0.5rem 0;
+
 }
 
+.contact-h2 {
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
 
 /* -----------------------*/
 /* --- INDEX.HTML --- */
@@ -272,7 +273,7 @@ h3 {
 }
 
 .latest-post-link a {
-  color:rgba(129, 64, 70);
+  color: rgba(129, 64, 70);
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   padding: 1rem;
   border-radius: 3px;
@@ -298,7 +299,12 @@ h3 {
 
 .blog-h2 {
   font-size: 4.4rem;
-  margin: 4rem 0 2rem 0 ;
+  margin: 4rem 0 2rem 0;
+  color: rgba(193, 102, 107);
+}
+
+.text-color-blog {
+  color: rgba(193, 102, 107);
 }
 
 /* -- Blog posts list -- */
@@ -328,7 +334,6 @@ h3 {
   justify-content: space-between;
   margin: 0 auto;
 }
-
 .cat-style a {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -399,8 +404,6 @@ h3 {
   background-color: #fff;
   color: #c1666b;
 }
-
-
 
 /* -----------------------*/
 /* --- SIGNIN.HTML --- */
@@ -490,15 +493,11 @@ h3 {
 
   .hero-div {
     margin-top: 12rem;
-  } 
-
+  }
 
   .hero-arrow {
     margin-top: 3rem;
   }
-
-  
-
 }
 
 @media (min-width: 44rem) {
@@ -514,7 +513,7 @@ h3 {
     min-height: 45rem;
   }
 
-  .post-background  {
+  .post-background {
     padding: 3rem;
   }
 
@@ -568,5 +567,4 @@ h3 {
     padding: 2rem;
     margin: 3rem;
   }
-
 }
