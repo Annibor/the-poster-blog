@@ -106,7 +106,7 @@
                           </button>
                         {% endif %}
                         <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
-                          <textarea class="form-control">{{ comment.body }}
+                          <textarea id="edit-body-{{ comment.id }}" class="form-control">{{ comment.body }}
                           </textarea>
                           <button class="btn btn-comments save-edit-btn" data-comment-id="{{ comment.id }}">
                             Save
