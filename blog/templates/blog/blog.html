@@ -136,7 +136,7 @@
                                     </form>
                                     <div>
                                       {% else %}
-                                      <p>Log in to leave a comment</p>
+                                      <p><a href="{% url 'account_login' %}?next={{ request.path }}">Log in to leave a comment</a></p>
                                       {% endif %}
                                     </div>
                                   </div>
