@@ -97,7 +97,7 @@
                           {{ comment.body | linebreaks }}
                         </div>
                         {% if not comment.approved and comment.author == user %}
-                        <p class="approval">This comment is awaiting approval</p>
+                        <p class="approval text-secondary fst-italic">This comment is awaiting approval</p>
                         {% endif %}
                         {% if user == comment.author %}
                         <button type="button" class="btn btn-comments edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
