@@ -12,9 +12,7 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card signup-form">
             <div class="card-body p-5">
-              <h2 class="signin-h2 text-center mb-5">
-                {% trans "Sign In" %}
-              </h2>
+              <h2 class="signin-h2 text-center mb-5"> {% trans "Sign In" %}</h2>
               {% get_providers as socialaccount_providers %}
               {% if socialaccount_providers %}
               <p class="text-center text-muted mt-5 mb-0">
@@ -30,35 +28,20 @@
                 </div>
                 {% include "socialaccount/snippets/login_extra.html" %}
                 {% else %}
-                <p>{% blocktrans %}If you have not created an account yet, then please
-                <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
                 {% endif %}
               </div>
               <form class="login signin-form" method="POST" action="{% url 'account_login' %}">
-                <div>
-                  {% csrf_token %}
-                  {{ form.as_p }}
-                  {% if redirect_field_value %}
-                  <div class="form-outline mb-4">
-                    <input 
-                    type="hidden" class="form-control form-control-lg" 
-                    name="{{ redirect_field_name }}" 
-                    value="{{ redirect_field_value }}"/>
-                    <input 
-                    type="text" id="username" 
-                    name="username" class="form-control form-control-lg" 
-                    placeholder="{% trans 'Name' %}" required />
-                    <label 
-                    class="form-label" 
-                    for="username">{% trans "Username" %}
-                    </label>
-                    {% endif %}
-                    <a class="btn secondaryAction m-1"
-                    href="{% url 'account_reset_password' %}">
-                    {% trans "Forgot Password?" %}</a>
-                    <button class="btn btn-form btn-lg text-light" 
-                    type="submit">{% trans "Sign In" %}</button>
-                  </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <div class="form-outline mb-4">
+                  <input type="hidden" class="form-control form-control-lg" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                  <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="{% trans 'Name' %}" required />
+                  <label class="form-label" for="username">{% trans "Username" %}</label>
+                  {% endif %}
+                  <a class="btn secondaryAction m-1" href="{% url 'account_reset_password' %}"> {% trans "Forgot Password?" %}</a>
+                  <button class="btn btn-form btn-lg text-light" type="submit">{% trans "Sign In" %}</button>
                 </div>
               </form>
             </div>
