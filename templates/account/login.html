@@ -35,28 +35,30 @@
                 {% endif %}
               </div>
               <form class="login signin-form" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                {% if redirect_field_value %}
-                <div class="form-outline mb-4">
-                  <input 
-                  type="hidden" class="form-control form-control-lg" 
-                  name="{{ redirect_field_name }}" 
-                  value="{{ redirect_field_value }}"/>
-                  <input 
-                  type="text" id="username" 
-                  name="username" class="form-control form-control-lg" 
-                  placeholder="{% trans 'Name' %}" required />
-                  <label 
-                  class="form-label" 
-                  for="username">{% trans "Username" %}
-                  </label>
-                  {% endif %}
-                  <a class="btn secondaryAction m-1"
-                  href="{% url 'account_reset_password' %}">
-                  {% trans "Forgot Password?" %}</a>
-                  <button class="btn btn-form btn-lg text-light" 
-                  type="submit">{% trans "Sign In" %}</button>
+                <div>
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  {% if redirect_field_value %}
+                  <div class="form-outline mb-4">
+                    <input 
+                    type="hidden" class="form-control form-control-lg" 
+                    name="{{ redirect_field_name }}" 
+                    value="{{ redirect_field_value }}"/>
+                    <input 
+                    type="text" id="username" 
+                    name="username" class="form-control form-control-lg" 
+                    placeholder="{% trans 'Name' %}" required />
+                    <label 
+                    class="form-label" 
+                    for="username">{% trans "Username" %}
+                    </label>
+                    {% endif %}
+                    <a class="btn secondaryAction m-1"
+                    href="{% url 'account_reset_password' %}">
+                    {% trans "Forgot Password?" %}</a>
+                    <button class="btn btn-form btn-lg text-light" 
+                    type="submit">{% trans "Sign In" %}</button>
+                  </div>
                 </div>
               </form>
             </div>
