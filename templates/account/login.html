@@ -52,12 +52,12 @@
                   for="username">{% trans "Username" %}
                   </label>
                   {% endif %}
+                  <a class="btn secondaryAction m-1"
+                  href="{% url 'account_reset_password' %}">
+                  {% trans "Forgot Password?" %}</a>
+                  <button class="btn btn-form btn-lg text-light" 
+                  type="submit">{% trans "Sign In" %}</button>
                 </div>
-                <a class="btn secondaryAction m-1"
-                href="{% url 'account_reset_password' %}">
-                {% trans "Forgot Password?" %}</a>
-                <button class="btn btn-form btn-lg text-light" 
-                type="submit">{% trans "Sign In" %}</button>
               </form>
             </div>
           </div>
