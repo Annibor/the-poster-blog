@@ -381,7 +381,19 @@ My link is: []()
 
 ## Languages
 
-- This CLI was built using python.
+- Python and the Django framework were used for backend development, data manipulation, and application logic.
+
+- HTML was utilized to structure the content on web pages.
+
+- CSS was employed for styling, including layout designs, colors, and fonts, to enhance the user interface.
+
+- JavaScript may have been used to add interactive elements to the web pages, in conjunction with libraries or frameworks like Bootstrap for responsive design.
+
+- SQL, through Django models, facilitated database management and operations, handling data storage, retrieval, and manipulation.
+
+- Django Template Language enabled dynamic data insertion into HTML, allowing for a seamless integration of backend and frontend elements.
+
+This project showcases a full-stack web development approach, leveraging the strengths of each technology to create a comprehensive and interactive web application.
 
 - [Back to Top](#table-of-content)
 
