@@ -102,24 +102,42 @@ By placing our users at the heart of The Poster Blog's development, we strive to
 I've created my wireframes for the website by using [Balsamiq](https://balsamiq.com/). I created one wireframe for mobile, tablet and desktop on each page of the website.
 
 #### **Home page**
+- ![Homepage mobile](documentation/wireframes/wireframes-home-mobile.png)
+- ![Homepage tablet](documentation/wireframes/wireframes-home-tablet.png)
+- ![Homepage desktop](documentation/wireframes/wireframes-home-desktop.png)
 
-
+- [Back to Top](#table-of-content)
 
 #### **Blog page**
+- ![Blogpage mobile](documentation/wireframes/wireframes-blog-mobile.png)
+- ![Blogpage tablet](documentation/wireframes/wireframes-blog-tablet.png)
+- ![Blogpage desktop](documentation/wireframes/wireframes-blog-desktop.png)
 
-
+- [Back to Top](#table-of-content)
 
 #### **Login**
 
-- 
+- ![Login page mobile](documentation/wireframes/wireframes-login-mobile.png)
+- ![Login page tablet](documentation/wireframes/wireframes-login-tablet.png)
+- ![Login page desktop](documentation/wireframes/wireframes-login-desktop.png)
+
+- [Back to Top](#table-of-content)
 
 #### **Register**
 
-- 
+- ![Register page](documentation/wireframes/wireframes-register-mobile.png)
+- ![Register page tablet](documentation/wireframes/wireframes-register-tablet.png)
+- ![Register page desktop](documentation/wireframes/wireframes-register-desktop.png)
+
+- [Back to Top](#table-of-content)
 
 #### **Logout**
 
-- 
+- ![Logout page mobile](documentation/wireframes/wireframes-logout-mobile.png)
+- ![Logout page tablet](documentation/wireframes/wireframes-logout-table.png)
+- ![Logout page desktop](documentation/wireframes/wireframes-logout-desktop.png)
+
+- [Back to Top](#table-of-content)
 
 ### Design Philosophy/ Features
 
@@ -175,12 +193,12 @@ Future features for the webpage are:
 ### Wc3
 
 - Logout page
-- [Logout page 1](/static/testingimages/wc3-logout-1.png)
-- [Logout page 2](/static/testingimages/wc3-logout-2.png)
+- [Logout page 1](/documentation/testingimages/wc3-logout-1.png)
+- [Logout page 2](/documentation/testingimages/wc3-logout-2.png)
 
 - Signup page
-- [Signup page 1](/static/testingimages/wc3-signup-1.png)
-- [Signup page 2](/static/testingimages/wc3-signup-2.png)
+- [Signup page 1](/documentation/testingimages/wc3-signup-1.png)
+- [Signup page 2](/documentation/testingimages/wc3-signup-2.png)
 ### DevTools
 
 - Troughout the development I've used Devtools to inspect and test the website to be able to make the best I could for it.
