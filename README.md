@@ -148,7 +148,7 @@ I've created my wireframes for the website by using [Balsamiq](https://balsamiq.
 #### **Logout**
 
 - ![Logout page mobile](documentation/wireframes/wireframes-logout-mobile.png)
-- ![Logout page tablet](documentation/wireframes/wireframes-logout-table.png)
+- ![Logout page tablet](documentation/wireframes/wireframes-logout-tablet.png)
 - ![Logout page desktop](documentation/wireframes/wireframes-logout-desktop.png)
 
 - [Back to Top](#table-of-content)
