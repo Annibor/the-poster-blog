@@ -60,6 +60,8 @@ The primary goal of *The Poster Blog* is to inspire creativity and share knowled
 - Creating an interactive community where users can engage with content through comments and by liking posts.
 - Providing a welcoming introduction to the blog on the homepage, where visitors can sample the beginning of the latest post.
 
+- [Back to Top](#table-of-content)
+
 ### User-Centered Approach
 
 For The Poster Blog, I've prioritize the users' experience above all. The design and development processes are deeply rooted in a user-centered approach, ensuring that the platform is not only visually appealing but also accessible, engaging, and easy to navigate. Here's how I've tailored The Poster Blog to our audience:
@@ -86,16 +88,22 @@ With a clear and concise menu, users can effortlessly find content categories, b
 
 By placing our users at the heart of The Poster Blog's development, we strive to create an online space that not only showcases Izzy's artistic talent but also builds a supportive and engaged community around her work.
 
+- [Back to Top](#table-of-content)
+
 #### As a General user
 
 - Discover new art and get inspired.
 - Learn about the artistic process and the life of a full-time artist.
 - Follow Izzy troughout her everyday life. 
 
+- [Back to Top](#table-of-content)
+
 #### As a New User
 
 - Get a welcomming introduction to the blog on the homepage,  where visitors can get a sneak peek of the latest post, encouraging deeper exploration into Izzy's world.
 - Get a clear understanding that visitors need to vreate an account and be logged in in order to read the full posts, and to leave comments.
+
+- [Back to Top](#table-of-content)
 
 ### Wireframes
 
@@ -157,13 +165,19 @@ I've created my wireframes for the website by using [Balsamiq](https://balsamiq.
 
 The design philosophy of The Poster Blog is deeply intertwined with its core mission to illuminate the art world for enthusiasts and newcomers alike. By prioritizing simplicity and accessibility, we ensure that Izzy's artwork and insights remain the focal point of every visitor's experience. Here’s an expanded overview of the design features and the thought process behind them, guided by your provided code:
 
+- [Back to Top](#table-of-content)
+
 #### **Responsive Design**
 - Fluid Layouts:
 Adapts effortlessly to any screen size, ensuring that every user enjoys a seamless browsing experience, whether on a desktop, tablet, or smartphone. This responsiveness is critical in today's diverse device landscape, allowing Izzy’s art to reach a broader audience without compromise.
 
+- [Back to Top](#table-of-content)
+
 #### **Minimalistic Layout**
 - Clutter-Free Interface: 
 Our minimalistic approach emphasizes content over decoration. By employing clean lines and a focused palette, the attention is drawn directly to Izzy's posts and artworks. This design choice reflects the belief that in simplicity, there's beauty and clarity that enhances user engagement.
+
+- [Back to Top](#table-of-content)
 
 #### **Usability Enhancements**
 - Navigation and Accessibility: 
@@ -172,10 +186,14 @@ User-friendly navigation is a cornerstone of our design. The intuitive menu syst
 Interactive Elements: 
 Through engaging UI components like comment buttons, like icons, and social media links, we encourage visitors to interact with the content. These features are designed to foster a community around Izzy’s work, allowing her insights and creations to spark conversations and connections.
 
+- [Back to Top](#table-of-content)
+
 #### **Future-Proof and Scalable**
 - Built to Evolve: 
 The architecture behind The Poster Blog is not just about meeting today's needs but anticipating tomorrow's growth. As Izzy’s career expands and her audience grows, the site is ready to scale, introducing new features and content without losing the essence of its design philosophy.
 In essence, the design of The Poster Blog is a thoughtful blend of aesthetics, functionality, and user experience principles. It serves as a digital canvas that beautifully showcases Izzy’s artistry while ensuring every visitor feels welcomed, inspired, and eager to engage.
+
+- [Back to Top](#table-of-content)
 
 ### Fonts
 **Typography and Colors**
@@ -183,9 +201,13 @@ In essence, the design of The Poster Blog is a thoughtful blend of aesthetics, f
 The chosen fonts, such as Inter, Lato, and Montserrat, offer a balance between artistic flair and readability. Each font weight and size is meticulously selected to guide the reader's eye through the content, enhancing comprehension without sacrificing aesthetic appeal.
 They are also chosen to make sure the fokus is drawn to Izzy´s blog posts.
 
+- [Back to Top](#table-of-content)
+
 ### Colors
 - Palette Choices:
 The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complements Izzy's vibrant artwork and creates an inviting atmosphere. These colors are not just background elements but integral parts of the storytelling process, evoking emotions and setting the mood for each post.
+
+- [Back to Top](#table-of-content)
 
 ### Features
 
@@ -193,6 +215,8 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 - ![Homepage Desktop](./documentation/)
 - ![Homepage Tablet](./documentation/)
 - ![Homepage Mobile](./documentation/)
+
+- [Back to Top](#table-of-content)
 
 ### Future Features
 
@@ -228,14 +252,7 @@ Planned enhancements for the website to further enrich user experience include:
 
 These features aim to enhance user engagement and provide a more personalized experience on the blog. Implementation will be prioritized based on user feedback and resource availability.
 
-
-
-
-
-
-
-
-
+- [Back to Top](#table-of-content)
 
 ## Testing
 
@@ -250,11 +267,18 @@ These features aim to enhance user engagement and provide a more personalized ex
 - Signup page
 - [Signup page 1](/documentation/testingimages/wc3-signup-1.png)
 - [Signup page 2](/documentation/testingimages/wc3-signup-2.png)
+
+- [Back to Top](#table-of-content)
+
 ### DevTools
 
 - Troughout the development I've used Devtools to inspect and test the website to be able to make the best I could for it.
 
+- [Back to Top](#table-of-content)
+
 ### Lighthouse
+
+- [Back to Top](#table-of-content)
 
 #### Issues
 
@@ -265,17 +289,23 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 - ![]()
 
+- [Back to Top](#table-of-content)
+
 #### Results
 
 - JSHint test for Javascript code.
 
 - ![]()
 
+- [Back to Top](#table-of-content)
+
 ### Manual testing
 
 I tested the website manualy throughout the whole developing progress. The website is tested in Safari, Google Chrome and Brave. The website is also tested from an Iphone.
 
-### Manual testing
+- [Back to Top](#table-of-content)
+
+#### Manual testing
 
 <table>
  <thead>
@@ -333,6 +363,8 @@ I tested the website manualy throughout the whole developing progress. The websi
   </tbody>
 </table>
 
+- [Back to Top](#table-of-content)
+
 ## Deployment
 
 I deployed early to be able to test the website deployed during the development. Following step are a description of how to deploy a webpage on GitHub:
@@ -345,17 +377,20 @@ I deployed early to be able to test the website deployed during the development.
 
 My link is: []()
 
+- [Back to Top](#table-of-content)
+
 ## Languages
 
 - This CLI was built using python.
+
+- [Back to Top](#table-of-content)
 
 ## Software
 
 - I've used Visual Studio Code to write the code.
 - I've used Git to load and push my code to Github and for version control.
 - I've used GitHub for repository management.
-- I've used Code Pen to test and change my code, without ruining the actual project.
-- I've used preinstalled app called "Prevew" to edit the sizes of the photos.
+- I've used preinstalled app called "Preview" to edit the sizes of the photos.
 - I've used Coolors.co to find a color palette for the website.
 - I've also used Coolors.co to contrast check text colors and background colors.
 - I've used maketintsandshades.com to find evetuals tints and shadow colors as a complement for the color palette.
@@ -363,48 +398,73 @@ My link is: []()
 - I've used cssgradient.io to make the background gradient.
 - I've used Chat GPT and google translate for some translations and questions.
 
+- [Back to Top](#table-of-content)
+
 ## Media
 
+- I've used Chat GPT for making images that would fit the project.
+- I've used unsplash for images.
+
+- [Back to Top](#table-of-content)
 
 ## Usage
 
 - This project is available for viewing and can be used for educational purposes.
 
+- [Back to Top](#table-of-content)
+
 ## Modification
 
 - Any modification, transformation, or extension of this project for commercial or public purposes is not allowed without explicit permission.
+
+- [Back to Top](#table-of-content)
 
 ## Distrubition
 
 - The redistribution of this project, wheter in its original form or with modifications, is sricktly prohibited without prior consent.
 
+- [Back to Top](#table-of-content)
+
 ## Private Use
 
 - Feel free to use this project for private purposes, sush as personal reference or study.
+
+- [Back to Top](#table-of-content)
 
 ## Liability
 
 - The creator of this project shall not be held liable for any adverse outcomes or damages resulting from the use or misapplication of this project. Users are advised to exercise due care and discretion when utilizing the project's resources and functionalities.
 
+- [Back to Top](#table-of-content)
+
 ## Credits
 
 ### Content
 
-- This README is based upon two sourses for guidance: one by Davis Calikes, available at [GitHub](https://github.com/davidcalikes/portfolio-project-one#readme), and another authored by me, available at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
-- 
-- 
+- This README is based upon three sourses for guidance: one by Davis Calikes, available at [GitHub](https://github.com/davidcalikes/portfolio-project-one#readme), one by Victoria Traynor, avaliable at [Github](https://github.com/VictoriaT87/P4-Aventine-Wellness/blob/main/README.md), and another authored by me, available at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
 - Usage, Modification, Distrubition, Private Use and Liability Content: The guidelines pertaining to usage, modification, distribution, private use, and liability are directly derived from my project, accessible at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
+
+- [Back to Top](#table-of-content)
+
+### General Credits
+- [MDBootstrap comments](https://mdbootstrap.com/docs/standard/extended/comments/)
+- [Get Bootstrap modal](https://getbootstrap.com/docs/5.2/components/modal/)
+- [Get Bootstrap navbar dropdown](https://getbootstrap.com/docs/5.2/components/dropdowns/#headers)
+- [Get Bootstrap navbar ](https://getbootstrap.com/docs/5.2/components/navbar/)
+
+- [Back to Top](#table-of-content)
 
 ### Special Thanks
 
 I would like to express my gratitude to the following individuals who have made a meaningful impact on this project:
 
 - **Michel**: My wonderful boyfriend, whose unwavering support and encouragement have been my constant motivation.
-
-- **A**: 
+- [Back to Top](#table-of-content)
 
 ## What I've Learned
 
 During the development of this project, I've gained valuable insights and skills that have enriched my coding journey. Here are some of the key takeaways:
 
 - **L**: 
+
+- [Back to Top](#table-of-content)
