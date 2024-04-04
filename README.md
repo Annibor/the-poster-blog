@@ -115,6 +115,20 @@ I've created my wireframes for the website by using [Balsamiq](https://balsamiq.
 
 - [Back to Top](#table-of-content)
 
+#### **Category**
+- ![Category page mobile](documentation/wireframes/wireframes-category-mobile.png)
+- ![Category page tablet](documentation/wireframes/wireframes-category-tablet.png)
+- ![Category page desktop](documentation/wireframes/wireframes-category-tablet.png)
+
+- [Back to Top](#table-of-content)
+
+#### **Not logged in**
+- ![Not logged in mobile](documentation/wireframes/wireframes-notloggedin-mobile.png)
+- ![Not logged in tablet](documentation/wireframes/wireframes-notloggedin-tablet.png)
+- ![Not logged in tablet](documentation/wireframes/wireframes-notloggedin-desktop.png)
+
+- [Back to Top](#table-of-content)
+
 #### **Login**
 
 - ![Login page mobile](documentation/wireframes/wireframes-login-mobile.png)
@@ -176,9 +190,9 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 ### Features
 
 - **Homepage**:
-- ![Homepage Desktop](./docs/screenshots/homepage-desktop.png)
-- ![Homepage Tablet](./docs/screenshots/homepage-tablet.png)
-- ![Homepage Mobile](./docs/screenshots/homepage-mobile.png)
+- ![Homepage Desktop](./documentation/)
+- ![Homepage Tablet](./documentation/)
+- ![Homepage Mobile](./documentation/)
 
 ### Future Features
 
