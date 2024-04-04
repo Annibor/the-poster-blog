@@ -64,7 +64,27 @@ Please note, Izzy is a fictional character created for this school project, and 
 
 ## Agile Planning
 
-The development of *The Poster Blog* was meticulously planned and executed following agile methodologies. This section outlines the user stories and epics that guided the development process, ensuring a user-focused and interactive platform for sharing Izzy's artistic journey.
+The development of *The Poster Blog* was meticulously planned and executed following agile methodologies. This section outlines the user stories and epics that guided the development process, ensuring that each feature not only meets the users' expectations but also enriches their interaction with the blog.
+
+### Structuring Development with User Stories
+
+At the heart of my agile planning were the User Stories - the narratives that captured the essence of what the users, both general visitors and registered members, sought from *The Poster Blog*. These stories facilitated a deep understanding of the audience's needs, guiding the development process from a user-centric perspective.
+
+### Task Breakdown and Epic Creation
+
+Each User Story sparked a series of tasks - specific, actionable steps designed to bring that story to life. These tasks ranged from frontend design tweaks to backend functionality enhancements, each contributing to the blog's overall appeal and usability. By grouping related tasks into Epics, I could maintain a coherent development flow while keeping an eye on the bigger picture. This grouping also allowed me to tackle the blog's features systematically, ensuring that every aspect of the user experience was thoughtfully crafted and implemented.
+
+### Prioritization with MoSCoW Method
+
+To navigate the myriad of development tasks efficiently, I used the MoSCoW method of prioritization:
+
+- **Must Have**: Core functionalities that were essential for the blog's launch, such as the ability to view and interact with blog posts.
+- **Should Have**: Important features that enhance the user experience, like the About page that offers deeper insights into the blog's purpose and Izzy's artistic journey.
+- **Could Have**: Additional features that, while not critical, could further enrich the blog, including enhanced styling and responsive design elements.
+- **Won't Have (this time)**: Ideas that were put on hold for future development, allowing us to focus on the most impactful features first.
+
+My project board can be found here: 
+[Project borad](https://github.com/users/Annibor/projects/8/views/1)
 
 - [Back to Top](#table-of-content)
 
@@ -153,11 +173,15 @@ The primary goal of *The Poster Blog* is to inspire creativity and share knowled
 
   - [Back to Top](#table-of-content)
 
-### Implementation and Reflection
+### Adaptive Development and Reflection
 
-Throughout the development process, I adapted to emerging needs and user feedback, which was crucial for refining and expanding the blog's features. The agile framework of user stories and epics allowed me to stay focused on delivering value to the users while also being flexible enough to embrace change.
+Embracing the agile framework, I embraced adaptability, seamlessly integrating feedback and addressing the evolving needs throughout the development of The Poster Blog. The journey began with the cornerstone elements—laying down the blog's structural foundation and establishing mechanisms for user interaction. This initial step set the stage for a broader, more nuanced expansion, allowing the blog to not merely serve as a digital platform, but to emerge as a vibrant, interactive community space that grows in tandem with its audience's engagement and artistic appreciation.
 
-By meticulously planning and executing these epics, *The Poster Blog* has become a platform that not only showcases Izzy's artistic endeavors but also fosters a dynamic and engaging community of art enthusiasts.
+The creation of The Poster Blog, guided by the principles of agile planning, stands as a testament to the profound impact of centering user needs and embracing an iterative approach to development. This commitment to refining the user experience continues to be the driving force as I further develop this foundation, inspired by the agile ethos that has been instrumental to our progress thus far.
+
+Throughout this process, the agile methodology—characterized by user stories and epics—served as a beacon, ensuring that each feature not only meets but exceeds user expectations. This strategic approach enabled a development trajectory that was both focused and flexible, capable of adapting to the shifting landscape of user needs and feedback.
+
+As a result, The Poster Blog has evolved into more than a showcase of Izzy's artistic journey; it has become a thriving community hub for art lovers. Through careful planning and execution of these epics, the blog has cultivated an environment where creativity flourishes, and the collective passion for art draws users into a deeper, more meaningful engagement with the content.
 
 - [Back to Top](#table-of-content)
 
