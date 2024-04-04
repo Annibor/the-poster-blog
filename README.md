@@ -50,6 +50,12 @@ Please note, Izzy is a fictional character created for this school project, and 
 
 ## Planning & developmnet
 
+## Agile Planning
+
+The development of *The Poster Blog* was meticulously planned and executed following agile methodologies. This section outlines the user stories and epics that guided the development process, ensuring a user-focused and interactive platform for sharing Izzy's artistic journey.
+
+- [Back to Top](#table-of-content)
+
 ### Project Goals
 
 The primary goal of *The Poster Blog* is to inspire creativity and share knowledge. Izzy aims to:
@@ -59,6 +65,87 @@ The primary goal of *The Poster Blog* is to inspire creativity and share knowled
 - Offer tips and tricks for aspiring artists and art lovers.
 - Creating an interactive community where users can engage with content through comments and by liking posts.
 - Providing a welcoming introduction to the blog on the homepage, where visitors can sample the beginning of the latest post.
+
+- [Back to Top](#table-of-content)
+
+### User Stories
+
+**As a Visitor or Registered User:**
+
+- **Access the Home Page**: I can view a welcoming page and selected blog posts to get a taste of what the blog offers.
+- **Access the About Page**: I can learn more about the blog and its creators, including their background, interests, and the vision behind the blog.
+- **Access the Login/Register Page**: I can log into my existing account or register for a new account, enabling me to interact with the content more personally.
+- **Access the Blog Page**: I can view previews of blog posts and engage with them through comments, deepening my connection with the content.
+- **Enjoy an Appealing and Consistent Style**: I can enjoy browsing a visually engaging environment that reflects the blog's creativity and enhances my content consumption experience.
+
+- [Back to top](#table-of-content)
+
+#### As a General user
+
+- Discover new art and get inspired.
+- Learn about the artistic process and the life of a full-time artist.
+- Follow Izzy troughout her everyday life. 
+
+- [Back to Top](#table-of-content)
+
+#### As a New User
+
+- Get a welcomming introduction to the blog on the homepage,  where visitors can get a sneak peek of the latest post, encouraging deeper exploration into Izzy's world.
+- Get a clear understanding that visitors need to vreate an account and be logged in in order to read the full posts, and to leave comments.
+
+- [Back to Top](#table-of-content)
+
+### Epic Breakdowns
+
+**Epic 1: Home Page Experience**
+
+- *Must Have*: Create a welcoming and informative home page.
+  
+**Tasks Included:**
+  - Design a hero section that introduces visitors to the blog.
+  - Select and display featured blog posts on the home page.
+
+**Epic 2: About Page Development**
+
+- *Should Have*: Offer comprehensive information about the blog and its creators.
+  
+**Tasks Included:**
+  - Provide detailed background information about Izzy and any co-authors.
+  - Outline the vision and goals of the blog.
+
+**Epic 3: Login and Registration Functionality**
+
+- *Must Have*: Enable users to log in or register seamlessly.
+  
+**Tasks Included:**
+  - Implement distinct forms for login and registration processes.
+  - Ensure user-friendly navigation between login and registration options.
+  - Provide clear feedback for validation errors or successful account actions.
+
+**Epic 4: Blog Interaction**
+
+- *Should Have*: Facilitate user interaction with blog posts.
+  
+**Tasks Included:**
+  - Display previews of blog posts with enticing summaries.
+  - Include interactive comment buttons on each post preview.
+
+**Epic 5: Website Styling and Responsiveness**
+
+- *Could Have*: Enhance the aesthetic appeal and functionality of the website.
+  
+**Tasks Included:**
+  - Develop a cohesive color scheme and typography style guide.
+  - Style interactive elements for improved user experience.
+  - Ensure responsive design for optimal viewing across devices.
+
+  - [Back to Top](#table-of-content)
+
+### Implementation and Reflection
+
+Throughout the development process, I adapted to emerging needs and user feedback, which was crucial for refining and expanding the blog's features. The agile framework of user stories and epics allowed me to stay focused on delivering value to the users while also being flexible enough to embrace change.
+
+By meticulously planning and executing these epics, *The Poster Blog* has become a platform that not only showcases Izzy's artistic endeavors but also fosters a dynamic and engaging community of art enthusiasts.
 
 - [Back to Top](#table-of-content)
 
@@ -90,20 +177,6 @@ By placing our users at the heart of The Poster Blog's development, we strive to
 
 - [Back to Top](#table-of-content)
 
-#### As a General user
-
-- Discover new art and get inspired.
-- Learn about the artistic process and the life of a full-time artist.
-- Follow Izzy troughout her everyday life. 
-
-- [Back to Top](#table-of-content)
-
-#### As a New User
-
-- Get a welcomming introduction to the blog on the homepage,  where visitors can get a sneak peek of the latest post, encouraging deeper exploration into Izzy's world.
-- Get a clear understanding that visitors need to vreate an account and be logged in in order to read the full posts, and to leave comments.
-
-- [Back to Top](#table-of-content)
 
 ### Wireframes
 
