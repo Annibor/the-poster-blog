@@ -196,7 +196,44 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 
 ### Future Features
 
-Future features for the webpage are:
+Planned enhancements for the website to further enrich user experience include:
+
+**Search Functionality**
+- *User Story*: As a reader, I want to search for blog posts using keywords so that I can easily find content that matches my interests.
+- *Acceptance Criteria*:
+ - Users can enter keywords into a search bar to find blog posts.
+ - Search results display posts with relevant titles and excerpts.
+ - Users can navigate from the search results to the full blog post.
+
+**Save Posts for Later**
+- **User Story**: As a registered user, I want to save blog posts to my profile so that I can easily access my favorite content at any time.
+- Acceptance Criteria:
+ - Users can save posts with a single click while reading.
+ - Saved posts are listed in the user's profile for future reference.
+ - Users can remove posts from their saved list.
+
+**Enhanced User Profile Management**
+- *User Story*: As a registered user, I want to view and edit my profile details so that I can keep my personal information up to date.
+- *Acceptance Criteria*:
+ - Users can access and edit their username, email, and profile picture from their profile page.
+ - Updates to the profile are saved and immediately reflected in the user's account.
+ - Users receive feedback upon successfully updating their profile details.
+
+**About Page for Blog and Creators**
+- *User Story*: As a visitor, I want to access an About page so that I can learn more about the blog and its creators.
+- *Acceptance Criteria*:
+ - The About page includes information about the blog's mission, the creators, and their backgrounds.
+ - The page highlights the unique aspects and values of the blog.
+ - Visitors find contact information or ways to connect with the creators.
+
+These features aim to enhance user engagement and provide a more personalized experience on the blog. Implementation will be prioritized based on user feedback and resource availability.
+
+
+
+
+
+
+
 
 
 
