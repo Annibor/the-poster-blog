@@ -372,6 +372,9 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 ### Wc3
 
+- Login page
+-[Login page](/documentation/testingimages/wc3-login.png)
+
 - Logout page
 - [Logout page 1](/documentation/testingimages/wc3-logout-1.png)
 - [Logout page 2](/documentation/testingimages/wc3-logout-2.png)
@@ -479,13 +482,43 @@ I tested the website manualy throughout the whole developing progress. The websi
 
 ## Deployment
 
-I deployed early to be able to test the website deployed during the development. Following step are a description of how to deploy a webpage on GitHub:
+This section guides you through the deployment of an project on Heroku, including handling different branches and deployment preferences.
 
-1. Open the []() and find the Settings tab.
-2. The navigate to the tab called Pages on the left.
-3. Choose to Deploy from a branch. For me it was the main branch.
-4. Save it. It can take a few minutes, but then you will be able to find the link to the deployed website in the repository on the menu to the right, under []().
-5. There you'll find the daployes website no top of the page under the heading Active deployments.
+### Preparing for Deployment
+
+Ensure your project includes a `requirements.txt` and a `Procfile`, which are essential for Heroku to understand how to run your application.
+
+1. **requirements.txt**: Generate this file using `pip freeze > requirements.txt` to list all necessary Python packages.
+2. **Procfile**: Create this file in your project's root directory with the content: `web: gunicorn your_project_name.wsgi`, replacing `your_project_name` with the name of your Django project.
+
+### Deploying to Heroku
+
+1. **Create a Heroku Account**: Sign up at [Heroku's website](https://signup.heroku.com/).
+2. **Create a Heroku App**: Use `heroku create your-app-name`, substituting `your-app-name` with your desired app name.
+3. **Set Config Vars**: Navigate to your app's settings on the Heroku dashboard, under "Config Vars", set:
+    - `SECRET_KEY`: Your Django secret key.
+    - `DATABASE_URL`: The database URL, typically provided by Heroku Postgres.
+    - `CLOUDINARY_URL`: If using Cloudinary for media storage, your Cloudinary URL.
+
+### Managing Branches and Deployment Options
+
+1. **Branch Management**: If your development involves multiple branches, Heroku deploys from the main branch by default. To deploy from a different branch, use `git push heroku your-branch-name:main`, replacing `your-branch-name` with the name of your branch.
+
+2. **Automatic vs. Manual Deployment**:
+   - **Automatic Deployment**: In the Heroku dashboard, under the "Deploy" tab, you can connect your GitHub repository and enable automatic deploys from your chosen branch. This means any push to the selected branch automatically triggers a deployment.
+   - **Manual Deployment**: If you prefer more control over when your changes go live, stick with manual deployments using the `git push heroku main` command for the main branch, or the appropriate branch name if deploying from a non-main branch.
+
+3. **Deployment Preference**: You can switch between automatic and manual deployments based on your project's needs. For instance, automatic deployments are convenient for continuous delivery environments, while manual deployments offer more control for testing and final approvals before going live.
+
+### Final Steps
+
+1. **Run Migrations**: Execute `python3 manage.py makemigrations` `python3 manage.py migrate` to apply database migrations.
+2. **Access Your App**: Open your app in a browser with `heroku open` or by visiting `https://your-app-name.herokuapp.com`.
+
+### Forking and Cloning (Optional)
+
+- **Forking**: Click 'Fork' on the GitHub repository page to copy the project under your account.
+- **Cloning**: Use `git clone copied-url` with the URL from the 'Code' button on GitHub to clone the repository for local development.
 
 My link is: []()
 
