@@ -51,6 +51,7 @@ Please note, Izzy is a fictional character created for this school project, and 
       - [**Results**](#results)
   - [**Deployment**](#deployment)
   - [**Languages**](#languages)
+  - [**Libraries and Installed Packages**](#libraries-and-installed-packages)
   - [**Software**](#software)
   - [**Media**](#media)
   - [**Usage**](#usage)
