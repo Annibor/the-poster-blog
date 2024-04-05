@@ -544,7 +544,18 @@ This project showcases a full-stack web development approach, leveraging the str
 
 ## Libraries and Installed Packages
 
-- 
+- Cloudinary: A cloud-based service for hosting videos and images. Used in conjunction with dj3-cloudinary-storage for managing static and media files in the cloud.
+- crispy-bootstrap5: An extension of django-crispy-forms specifically for Bootstrap 5.
+- django-allauth: Provides authentication, registration, account management, and third-party (social) account authentication.
+- django-crispy-forms: Django application that lets you easily build, customize and reuse forms using your favorite CSS framework.
+- django-summernote: A Django app that integrates the Summernote editor with Django. Useful for adding a rich text editor to your blog.
+- dj-database-url: Utility to configure your Django application's database using the `DATABASE_URL` environment variable.
+- dj3-cloudinary-storage: For integrating Cloudinary's cloud storage solutions with your Django application.
+- gunicorn: A Python WSGI HTTP Server for UNIX, used for deploying Python applications.
+- psycopg2: PostgreSQL adapter for Python.
+- whitenoise: Allows your web application to serve its own static files, making it easier to deploy Django apps on platforms like Heroku.
+
+- [Back to Top](#table-of-content)
 
 ## Software
 
