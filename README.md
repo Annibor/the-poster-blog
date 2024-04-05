@@ -424,58 +424,248 @@ I tested the website manualy throughout the whole developing progress. The websi
 #### Manual testing
 
 <table>
- <thead>
+  <thead>
    <tr>
      <th>Testing Description</th>
      <th>Expected Action</th>
      <th>Actual Output</th>
      <th>Result</th>
-
    </tr>
  </thead>
   <tbody>
+  <tr>
+     <th>Responsive navbar</th>
+     <th>Navbar changes from humburger menu into a horizontal list when changing screen sizes</th>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+  <tr>
+     <td>Navlinks works.</td>
+     <td>Navbar opens each link correct.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Fontsize rezies for larger screens.</td>
+     <td>The font-sizes changes for better UX dependign on screensize.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Images rezies for larger screens.</td>
+     <td>Images rezies for larger screens.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+    <tr>
+     <td>Layout for posts changes depending on screenssize.</td>
+     <td>Images renders over text on smaller screens and moves to the left of the text on desktops.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+    <tr>
+     <td>Messages are displayed for user logged in status.</td>
+     <td>Message of not logged in or welcome back user-name is shown.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+    <tr>
+     <td>Instagram link in footer works.</td>
+     <td>Link works and open Instagram when clicked.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+    <tr>
+     <td>Facebook link in footer works.</td>
+     <td>Link works and open Facebook when clicked.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Visitor can register on website.</td>
+     <td>Visitors can register on the website correctly.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Users can login from login page.</td>
+     <td>Users can login from login page.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Remember me checkbox works.</td>
+     <td>Users can use remember me checkbox for fast login.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Logout works.</td>
+     <td>Users can logout correclty and gets confirmation button to click before getting logged out.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Comment button works.</td>
+     <td>Comment button opens modal that shows comments for the post.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Users can create comments.</td>
+     <td>Only logged in users can create comments.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>New comments awaiting approval.</td>
+     <td>New comments only renders for the writer, until admin have accepted that the comment is okey.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Accepted comments shows in modal.</td>
+     <td>Commments admin ahve accepted renders in modal.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Read full blogpost on home page works.</td>
+     <td>The button redirect user to blog page</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Category pages works as expected.</td>
+     <td>Different categorys only renders the connected blogposts.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Login to leave a comment link works.</td>
+     <td>Login to leave a comment link redirects user to login page.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Signup link from login page works.</td>
+     <td>Signup link from login page redirects user to register page.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Must agree to terms when register new user.</td>
+     <td>Must agree to terms when register a new user, or else get message saying you need to accepte before continuing.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Sigin link from register page works.</td>
+     <td>Signin link from register page redirects user to login page.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Navitems changes color when hoovered over.</td>
+     <td>Navitems changes color when hoovered over.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Navlinks gets larger when clicked on.</td>
+     <td>Navlinks gets larger when clicked on.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Message of comments awaiting approval shows.</td>
+     <td>Message of comments awaiting approval shows.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Message of comments awaiting approval can be deleted by clicking X.</td>
+     <td>User can delete message of comments awaiting approval by clicking X.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Edit button for commetns works.</td>
+     <td>Edit button for commetns works, and only on the comments the user have been writeing self.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Delete button works.</td>
+     <td>Delete button works only for the user that have been writing it, and are you sure message shows. User needs to confirm the deletion and then the comment will be delted.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Closing modal button works.</td>
+     <td>Closing buttons in modal closes it when clicked.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Like button works.</td>
+     <td>Registered useres can like blogposts.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>The number of comments shows</td>
+     <td>The number of comments shows - and only the ones that are accepted by admin..</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>The number of likes shows.</td>
+     <td>The number of likes shows.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Category shows, and link works.</td>
+     <td>The category shows adn redirtect user to the specific category page when clicked.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
+   <tr>
+     <td>Date when publiched post works.</td>
+     <td>Date when publiched post works.</td>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr>
    <tr>
      <td>Testing description.</td>
      <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
+     <th>As expected</th>
+     <th>Pass</th>
    </tr>
    <tr>
      <td>Testing description.</td>
      <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
-   </tr>
-    <tr>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr><tr>
      <td>Testing description.</td>
      <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
-   </tr>
-    <tr>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr><tr>
      <td>Testing description.</td>
      <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
-   </tr>
-    <tr>
+     <th>As expected</th>
+     <th>Pass</th>
+   </tr><tr>
      <td>Testing description.</td>
      <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
+     <th>As expected</th>
+     <th>Pass</th>
    </tr>
-    <tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
-   </tr>
-   <tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
-     <td>Actual output</td>
-     <td>result</td>
-   </tr>
+   
+
   </tbody>
 </table>
 
