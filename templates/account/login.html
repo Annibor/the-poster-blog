@@ -26,19 +26,19 @@
                 <div class="login-or">
                   {% trans 'or' %}
                 </div>
-                {% include "socialaccount/snippets/login_extra.html" %}
-                {% else %}
-                <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-                {% endif %}
               </div>
+              {% include "socialaccount/snippets/login_extra.html" %}
+              {% else %}
+              <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+              {% endif %}
               <form class="login signin-form" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
-                  <input type="hidden" class="form-control form-control-lg" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-                  {% endif %}
-                  <a class="btn secondaryAction m-1" href="{% url 'account_reset_password' %}"> {% trans "Forgot Password?" %}</a>
-                  <button class="btn btn-form btn-lg text-light" type="submit">{% trans "Sign In" %}</button>
+                <input type="hidden" class="form-control form-control-lg" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                {% endif %}
+                <a class="btn secondaryAction m-1" href="{% url 'account_reset_password' %}"> {% trans "Forgot Password?" %}</a>
+                <button class="btn btn-form btn-lg text-light" type="submit">{% trans "Sign In" %}</button>
               </form>
             </div>
           </div>

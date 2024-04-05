@@ -509,6 +509,10 @@ This project showcases a full-stack web development approach, leveraging the str
 
 - [Back to Top](#table-of-content)
 
+## Libraries and Installed Packages
+
+- 
+
 ## Software
 
 - I've used Visual Studio Code to write the code.
