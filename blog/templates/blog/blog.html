@@ -36,7 +36,7 @@
                 <div class="post-content mx-auto p-4">{{ post.post_content | safe }}</div>
                 {% else %}
                 <div class="post-content mx-auto p-4">{{ post.post_content | truncatewords:45 |safe }}</div>
-                <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
+                <a href="{% url 'account_login' %}">Please log in to read more!</a>
                 {% endif %}
               </div>
               <div class="likes-comments icons px-5 mb-2">

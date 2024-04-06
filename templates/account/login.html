@@ -15,10 +15,10 @@
               <h2 class="signin-h2 text-center mb-5"> {% trans "Sign In" %}</h2>
               {% get_providers as socialaccount_providers %}
               {% if socialaccount_providers %}
-              <p class="text-center text-muted mt-5 mb-0">
+              <div class="text-center text-muted mt-5 mb-0">
                 {% blocktrans with site.name as site_name %}Please sign in with one
               of your existing third party accounts. Or, <a href="{{ signup_url }}" class="fw-bold text-body">sign up</a>
-              for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+              for a {{ site_name }} account and sign in below:{% endblocktrans %}</div>
               <div class="socialaccount_ballot">
                 <ul class="socialaccount_providers">
                   {% include "socialaccount/snippets/provider_list.html" with process="login" %}
@@ -29,7 +29,7 @@
               </div>
               {% include "socialaccount/snippets/login_extra.html" %}
               {% else %}
-              <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+              <div>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</div>
               {% endif %}
               <form class="login signin-form" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
