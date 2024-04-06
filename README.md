@@ -644,8 +644,8 @@ I tested the website manualy throughout the whole developing progress. The websi
      <th>Pass</th>
    </tr>
    <tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
+     <td>Logo link i n footer work.</td>
+     <td>Logo link in footer redirects user to starting page.</td>
      <th>As expected</th>
      <th>Pass</th>
    </tr><tr>
