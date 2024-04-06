@@ -638,8 +638,8 @@ I tested the website manualy throughout the whole developing progress. The websi
      <th>Pass</th>
    </tr>
    <tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
+     <td>Pagination buttons work.</td>
+     <td>Pagination buttons works.</td>
      <th>As expected</th>
      <th>Pass</th>
    </tr>
