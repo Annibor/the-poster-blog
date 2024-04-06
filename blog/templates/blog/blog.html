@@ -36,7 +36,7 @@
                 <div class="post-content mx-auto p-4">{{ post.post_content | safe }}</div>
                 {% else %}
                 <div class="post-content mx-auto p-4">{{ post.post_content | truncatewords:45 |safe }}</div>
-                <a href="{% url 'account_login' %}?next={{ request.path }}">Please log in to read more!</a>
+                <a href="{% url 'account_login' %}">Please log in to read more!</a>
                 {% endif %}
               </div>
               <div class="likes-comments icons px-5 mb-2">
@@ -80,7 +80,7 @@
                 <div class="modal-dialog modal-xl modal-dialog-scrollable">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="CommentsModalLabel">Comments</h1>
+                      <h2 class="modal-title fs-5" id="CommentsModalLabel">Comments</h2>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -89,15 +89,15 @@
                       {% for comment in post.comments.all %}
                       <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none
                       {% endif %}" id="comment-container{{ comment.id }}">
-                        <p class="font-weight-bold">
+                        <div class="font-weight-bold">
                           {{ comment.author }}
                           <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
-                        </p>
+                        </div>
                         <div id="comment{{ comment.id }}">
                           {{ comment.body | linebreaks }}
                         </div>
                         {% if not comment.approved and comment.author == user %}
-                        <p class="approval">This comment is awaiting approval</p>
+                        <div class="approval">This comment is awaiting approval</div>
                         {% endif %}
                         {% if user == comment.author %}
                         <button type="button" class="btn btn-comments edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
@@ -106,8 +106,7 @@
                           </button>
                         {% endif %}
                         <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
-                          <textarea class="form-control">{{ comment.body }}
-                          </textarea>
+                          <textarea id="edit-body-{{ comment.id }}" class="form-control">{{ comment.body }}</textarea>
                           <button class="btn btn-comments save-edit-btn" data-comment-id="{{ comment.id }}">
                             Save
                           </button>
@@ -118,7 +117,7 @@
                       </div>
                       {% endfor %}
                       {% else %}
-                      <p>No comments yet.</p>
+                      <div>No comments yet.</div>
                       {% endif %}
                       <div class="container my-5 py-5 text-dark">
                         <div class="row d-flex justify-content-center">
@@ -128,7 +127,7 @@
                                 <div class="d-flex flex-column w-100">
                                   {% if user.is_authenticated %}
                                     <h3>Leave a comment:</h3>
-                                    <p>Posting as: {{ user.username }}</p>
+                                    <div>Posting as: {{ user.username }}</div>
                                     <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{ post.slug }}">
                                       {% csrf_token %}
                                       <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
@@ -136,7 +135,7 @@
                                     </form>
                                     <div>
                                       {% else %}
-                                      <p>Log in to leave a comment</p>
+                                      <div><a href="{% url 'account_login' %}">Log in to leave a comment</a></div>
                                       {% endif %}
                                     </div>
                                   </div>

@@ -34,15 +34,15 @@
   <div class="container latest-post-div">
     <div>
       <div class="p-5">
-        <h2 class="text-light text-center latest-post-h2">Latest Post</h2>
+        <h2 class="text-light text-center latest-post-h2">Latest post</h2>
         {% if latest_post %}
         <div class="post-background latest-post-link mb-5">
           <h2 class="latest-post-p">{{ latest_post.title }}</h2>
-          <p>{{ latest_post_content | safe }}</p>
+          <div>{{ latest_post_content | truncatewords:45 | safe }}</div>
           <a class="d-flex justify-content-center" href="{% url 'blog:blog' %}">Read the full blogpost and more here!</a>
         </div>
         {% else %}
-        <p class="mb-5">No posts available.</p>
+        <div class="mb-5">No posts available.</div>
         {% endif %}
       </div>
     </div>
