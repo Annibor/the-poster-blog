@@ -172,6 +172,7 @@ h3 {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .footer-h3 {
