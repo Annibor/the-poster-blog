@@ -649,8 +649,8 @@ I tested the website manualy throughout the whole developing progress. The websi
      <th>As expected</th>
      <th>Pass</th>
    </tr><tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
+     <td>Save button for edit comments works.</td>
+     <td>Save button saves the edited comment and update it.</td>
      <th>As expected</th>
      <th>Pass</th>
    </tr><tr>
