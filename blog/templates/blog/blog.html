@@ -89,15 +89,15 @@
                       {% for comment in post.comments.all %}
                       <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none
                       {% endif %}" id="comment-container{{ comment.id }}">
-                        <p class="font-weight-bold">
+                        <div class="font-weight-bold">
                           {{ comment.author }}
                           <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
-                        </p>
+                        </div>
                         <div id="comment{{ comment.id }}">
                           {{ comment.body | linebreaks }}
                         </div>
                         {% if not comment.approved and comment.author == user %}
-                        <p class="approval">This comment is awaiting approval</p>
+                        <div class="approval">This comment is awaiting approval</div>
                         {% endif %}
                         {% if user == comment.author %}
                         <button type="button" class="btn btn-comments edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
@@ -117,7 +117,7 @@
                       </div>
                       {% endfor %}
                       {% else %}
-                      <p>No comments yet.</p>
+                      <div>No comments yet.</div>
                       {% endif %}
                       <div class="container my-5 py-5 text-dark">
                         <div class="row d-flex justify-content-center">
@@ -127,7 +127,7 @@
                                 <div class="d-flex flex-column w-100">
                                   {% if user.is_authenticated %}
                                     <h3>Leave a comment:</h3>
-                                    <p>Posting as: {{ user.username }}</p>
+                                    <div>Posting as: {{ user.username }}</div>
                                     <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{ post.slug }}">
                                       {% csrf_token %}
                                       <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
@@ -135,7 +135,7 @@
                                     </form>
                                     <div>
                                       {% else %}
-                                      <p><a href="{% url 'account_login' %}?next={{ request.path }}">Log in to leave a comment</a></p>
+                                      <div><a href="{% url 'account_login' %}">Log in to leave a comment</a></div>
                                       {% endif %}
                                     </div>
                                   </div>
