@@ -373,6 +373,14 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 ### Wc3
 
+- Homepage
+- [Homepage 1](/documentation/testingimages/wc3-home-1.png)
+- [Homepage 2](/documentation/testingimages/wc3-home-2.png)
+
+- Blog page
+- [Blog page 1](/documentation/testingimages/wc3-blog-1.png)
+- [Blog page 2](/documentation/testingimages/wc3-blog-2.png)
+
 - Login page
 -[Login page](/documentation/testingimages/wc3-login.png)
 
