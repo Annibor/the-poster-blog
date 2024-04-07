@@ -373,6 +373,14 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 ### Wc3
 
+- Homepage
+- [Homepage 1](/documentation/testingimages/wc3-home-1.png)
+- [Homepage 2](/documentation/testingimages/wc3-home-2.png)
+
+- Blog page
+- [Blog page 1](/documentation/testingimages/wc3-blog-1.png)
+- [Blog page 2](/documentation/testingimages/wc3-blog-2.png)
+
 - Login page
 -[Login page](/documentation/testingimages/wc3-login.png)
 
@@ -829,6 +837,10 @@ I would like to express my gratitude to the following individuals who have made 
 
 During the development of this project, I've gained valuable insights and skills that have enriched my coding journey. Here are some of the key takeaways:
 
-- **L**: 
+- **Problems**:
+I had a lot of problems with changes that I made in the code came back after som git commits. Here I will show an example of code that I deleted, and after some git commits tha code was back, and I had to delete it again:
+- [Changed Code Back](/documentation/otherimages/changed-code-back.png)
+- [Changed Code Back 2](/documentation/otherimages/changed-code-back-2.png)
+- [Changed Code Back 3](/documentation/otherimages/changed-code-back-3.png)
 
 - [Back to Top](#table-of-content)
