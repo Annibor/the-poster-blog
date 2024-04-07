@@ -154,6 +154,9 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Custom form used for SignUp
+ACCOUNT_FORMS = {'signup': 'blog.forms.RegisterForm'}
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

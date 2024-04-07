@@ -16,32 +16,10 @@
 
               <form class="signup signin-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
-                <div class="form-outline mb-4">
-                  <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Name" required />
-                  <label class="form-label" for="username">{% trans "Your Name" %}</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Email" required />
-                  <label class="form-label" for="email">{% trans "Your Email" %}</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="password1" name="password1" class="form-control form-control-lg" placeholder="Password" required />
-                  <label class="form-label" for="password1">{% trans "Password" %}</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="password2" name="password2" class="form-control form-control-lg" placeholder="Password" required />
-                  <label class="form-label" for="password2">{% trans "Repeat your password" %}</label>
-                </div>
-
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="terms" required />
-                  <label class="form-check-label" for="terms">
-                    {% blocktrans %}I agree all statements in <a href="#" class="text-body"><u>Terms of service</u></a>{% endblocktrans %}
-                  </label>
-                </div>
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
 
                 <div class="d-flex justify-content-center">
                   <button type="submit" class="btn btn-form btn-block btn-lg text-light w-100">{% trans "Register" %}</button>

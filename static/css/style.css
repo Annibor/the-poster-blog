@@ -363,6 +363,12 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+/* Comments */
+.edit-form-hidden {
+  display: none;
+}
+
 .btn-comments {
   color: white;
   background-color: rgba(193, 102, 107, 0.7);
