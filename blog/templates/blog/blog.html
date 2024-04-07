@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="row">
-    {% for post in post_list %}
+      {% for post in post_list %}
       <div class="col-md-12 mb-4 mx-auto">
         <div class="blog-post-cont background-posts">
           <div class="row">
@@ -72,7 +72,7 @@
               Comments
             </button>
             <!-- Modal -->
-            <div class="modal fade" id="CommentsModal{{ post.id }}" data-bs-backdrop="static" data-bs-keyboard="false"tabindex="-1"aria-labelledby="CommentsModalLabel" aria-hidden="true">
+            <div class="modal fade" id="CommentsModal{{ post.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="CommentsModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -80,60 +80,59 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    {% if post.comments.all %}
-                    <!-- Loop through comments and display them -->
-                    {% for comment in post.comments.all %}
-                    <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none
-                    {% endif %}" id="comment-container{{ comment.id }}">
-                      <div class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
-                      </div>
-                      <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
-                      </div>
-                      {% if not comment.approved and comment.author == user %}
-                      <div class="approval">This comment is awaiting approval</div>
-                      {% endif %}
-                      {% if user == comment.author %}
-                      <button type="button" class="btn btn-comments edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
-                      <button class="btn delete-comment-btn" data-post-slug="{{ post.slug }}" data-comment-id="{{ comment.id }}">
-                        Delete
-                        </button>
-                      {% endif %}
-                      <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
-                        <textarea id="edit-body-{{ comment.id }}" class="form-control">{{ comment.body }}</textarea>
-                        <button class="btn btn-comments save-edit-btn" data-comment-id="{{ comment.id }}">
-                          Save
-                        </button>
-                        <button class="btn btn-secondary cancel-edit-btn" data-comment-id="{{ comment.id }}">
-                          Cancel
-                        </button>
-                      </div>
+                  {% if post.comments.all %}
+                  <!-- Loop through comments and display them -->
+                  {% for comment in post.comments.all %}
+                  <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded {% elif not comment.approved %} d-none
+                  {% endif %}" id="comment-container{{ comment.id }}">
+                    <div class="font-weight-bold">
+                    {{ comment.author }}
+                      <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
                     </div>
-                    {% endfor %}
-                    {% else %}
-                    <div>No comments yet.</div>
+                    <div id="comment{{ comment.id }}">
+                      {{ comment.body | linebreaks }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <div class="approval">This comment is awaiting approval</div>
                     {% endif %}
-                    <div class="container my-5 py-5 text-dark">
-                      <div class="row d-flex justify-content-center">
-                        <div class="col-md-10 col-lg-8 col-xl-6">
-                          <div class="card">
-                            <div class="card-body p-4">
-                              <div class="d-flex flex-column w-100">
-                                {% if user.is_authenticated %}
-                                <h3>Leave a comment:</h3>
-                                <div>Posting as: {{ user.username }}</div>
-                                <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{post.slug }}">
-                                  {% csrf_token %}
-                                  <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
-                                  <button type="submit" id="submitButton" class="btn btn-comments">Submit</button>
-                                </form>
-                                <div>
-                                  {% else %}
-                                  <div><a href="{% url 'account_login' %}">Log in to leave a comment</a></div>
-                                  {% endif %}
-                                </div>
+                    {% if user == comment.author %}
+                    <button type="button" class="btn btn-comments edit-comment-btn" data-comment-id="{{ comment.id }}">Edit</button>
+                    <button class="btn delete-comment-btn" data-post-slug="{{ post.slug }}" data-comment-id="{{ comment.id }}">
+                      Delete
+                    </button>
+                    {% endif %}
+                    <div id="edit-comment-form-{{ comment.id }}" style="display: none;">
+                      <textarea id="edit-body-{{ comment.id }}" class="form-control">{{ comment.body }}</textarea>
+                      <button class="btn btn-comments save-edit-btn" data-comment-id="{{ comment.id }}">
+                        Save
+                      </button>
+                      <button class="btn btn-secondary cancel-edit-btn" data-comment-id="{{ comment.id }}">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  {% else %}
+                  <div>No comments yet.</div>
+                  {% endif %}
+                  <div class="container my-5 py-5 text-dark">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-md-10 col-lg-8 col-xl-6">
+                        <div class="card">
+                          <div class="card-body p-4">
+                            <div class="d-flex flex-column w-100">
+                              {% if user.is_authenticated %}
+                              <h3>Leave a comment:</h3>
+                              <div>Posting as: {{ user.username }}</div>
+                              <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{postslug }}">
+                                {% csrf_token %}
+                                <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
+                                <button type="submit" id="submitButton" class="btn btn-comments">Submit</button>
+                              </form>
+                              <div>
+                                {% else %}
+                                <div><a href="{% url 'account_login' %}">Log in to leave a comment</a></div>
+                                {% endif %}
                               </div>
                             </div>
                           </div>
@@ -141,18 +140,19 @@
                       </div>
                     </div>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {% if forloop.counter|divisibleby:2 %}
-        <div class="row">
-        {% endif %}
-        {% endfor %}
+      </div>
+      {% if forloop.counter|divisibleby:2 %}
+      <div class="row">
+      {% endif %}
+      {% endfor %}
       </div>
     </div>
   </div>
