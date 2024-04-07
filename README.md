@@ -814,6 +814,7 @@ This project showcases a full-stack web development approach, leveraging the str
 - [Get Bootstrap modal](https://getbootstrap.com/docs/5.2/components/modal/)
 - [Get Bootstrap navbar dropdown](https://getbootstrap.com/docs/5.2/components/dropdowns/#headers)
 - [Get Bootstrap navbar ](https://getbootstrap.com/docs/5.2/components/navbar/)
+- [Costume Signup Form Allauth](https://docs.allauth.org/en/latest/account/forms.html)
 
 - [Back to Top](#table-of-content)
 
