@@ -381,6 +381,10 @@ These features aim to enhance user engagement and provide a more personalized ex
 - [Blog page 1](/documentation/testingimages/wc3-blog-1.png)
 - [Blog page 2](/documentation/testingimages/wc3-blog-2.png)
 
+- Category page
+- [Category page 1](/documentation/testingimages/wc3-category-1.png)
+- [Category page 2](/documentation/testingimages/wc3-category-2.png) 
+
 - Login page
 -[Login page](/documentation/testingimages/wc3-login.png)
 
