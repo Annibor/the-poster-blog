@@ -4,7 +4,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-
 <div class="background-color-blog">
   <div class="container">
     <div class="text-light" >
@@ -14,7 +13,7 @@
       </div>
     </div>
     <div class="row">
-      {% for post in post_list %}
+    {% for post in post_list %}
       <div class="col-md-12 mb-4 mx-auto">
         <div class="blog-post-cont background-posts">
           <div class="row">
@@ -55,26 +54,25 @@
               </div>
               <div class="like-btn">
                 {% if user.is_authenticated %}
-              <form action="{% url 'blog:like_post' post.slug %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="btn d-grid gap-1 like-btn btn-lg">
+                <form action="{% url 'blog:like_post' post.slug %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" class="btn d-grid gap-1 like-btn btn-lg">
                   {% if request.user in post.likes.all %}
                   <i class="fas heart-icon fa-heart"></i> Unlike
                   {% else %}
                   <i class="far heart-icon fa-heart"></i> Like
                   {% endif %}
                   </button>
-              </form>
+                </form>
               {% endif %}
               </div>
             </div>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-comments mb-2 mx-auto py-4 btn-font " data-bs-toggle="modal" data-bs-target="#CommentsModal{{ post.id }}">
+            <button type="button" class="btn btn-comments mb-2 mx-auto py-4 btn-font " data-bs-toggle="modal" data-bs-target="#CommentsModal{{ postid }} ">
               Comments
             </button>
-            
             <!-- Modal -->
-            <div class="modal fade" id="CommentsModal{{ post.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"aria-labelledby="CommentsModalLabel" aria-hidden="true">
+            <div class="modal fade" id="CommentsModal{{ post.id }}" data-bs-backdrop="static" data-bs-keyboard="false"tabindex="-1"aria-labelledby="CommentsModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -124,18 +122,17 @@
                             <div class="card-body p-4">
                               <div class="d-flex flex-column w-100">
                                 {% if user.is_authenticated %}
-                                  <h3>Leave a comment:</h3>
-                                  <div>Posting as: {{ user.username }}</div>
-                                  <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{ post.slug }}">
-                                    {% csrf_token %}
-                                    <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
-                                    <button type="submit" id="submitButton" class="btn btn-comments">Submit</button>
-                                  </form>
-                                  <div>
-                                    {% else %}
-                                    <div><a href="{% url 'account_login' %}">Log in to leave a comment</a></div>
-                                    {% endif %}
-                                  </div>
+                                <h3>Leave a comment:</h3>
+                                <div>Posting as: {{ user.username }}</div>
+                                <form method="post" id="commentForm" action="{% url 'blog:comment_create' slug=post.slug %}" data-post-slug="{{post.slug }}">
+                                  {% csrf_token %}
+                                  <textarea class="form-control" id="bodyField" name="body" placeholder="Leave a comment..."></textarea>
+                                  <button type="submit" id="submitButton" class="btn btn-comments">Submit</button>
+                                </form>
+                                <div>
+                                  {% else %}
+                                  <div><a href="{% url 'account_login' %}">Log in to leave a comment</a></div>
+                                  {% endif %}
                                 </div>
                               </div>
                             </div>
@@ -153,8 +150,7 @@
           </div>
         </div>
         {% if forloop.counter|divisibleby:2 %}
-      </div>
-      <div class="row">
+        <div class="row">
         {% endif %}
         {% endfor %}
       </div>
