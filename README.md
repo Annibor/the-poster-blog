@@ -50,6 +50,7 @@ Please note, Izzy is a fictional character created for this school project, and 
     - [**Ligthouse**](#lighthouse)
     - [**JS Hint**](#js-hint)
   - [**Deployment**](#deployment)
+  - [**Bugs**](#bugs)
   - [**Languages**](#languages)
   - [**Libraries and Installed Packages**](#libraries-and-installed-packages)
   - [**Software**](#software)
@@ -796,6 +797,10 @@ Ensure your project includes a `requirements.txt` and a `Procfile`, which are es
 My link is: []()
 
 - [Back to Top](#table-of-content)
+
+## Bugs
+
+- The password reset template don't work properly, instead I added in a paragraph for users to email Izzy if having problem with password. This is not ideal, but snece this is a school project I won't pay for a mailserver sence there is not mentioned that it's required to add it to this project.
 
 ## Languages
 
