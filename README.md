@@ -47,8 +47,7 @@ Please note, Izzy is a fictional character created for this school project, and 
   - [**Testing**](#testing)
   - [**Devtools**](#devtools)
     - [**Ligthouse**](#lighthouse)
-      - [**Issues**](#issues)
-      - [**Results**](#results)
+    - [**JS Hint**](#js-hint)
   - [**Deployment**](#deployment)
   - [**Languages**](#languages)
   - [**Libraries and Installed Packages**](#libraries-and-installed-packages)
@@ -476,22 +475,11 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 - [Back to Top](#table-of-content)
 
-#### Issues
-
-- 
-- ![]()
-
-- 
-
-- ![]()
-
-- [Back to Top](#table-of-content)
-
-#### Results
+### JS HINT
 
 - JSHint test for Javascript code.
 
-- ![]()
+- ![Js hint test for javascript](/documentation/testingimages/jshint-test.png)
 
 - [Back to Top](#table-of-content)
 
