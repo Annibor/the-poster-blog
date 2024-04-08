@@ -1,11 +1,11 @@
-# The Poster Blog
+# Blizzy Art
 
 []()
 
 # Introduction
 
 Welcome to *The Poster Blog*, a vibrant space curated by Izzy, a passionate poster artist and painter. Through her blog, Izzy explores the intersection of art and daily life, offering a glimpse into her creative process, sharing personal stories, and providing valuable tips and tricks for fellow art enthusiasts.
-*The Poster Blog* is more than just a blog; it's a narrative journey through the eyes of Izzy, showcasing how art can be woven into the fabric of our everyday lives. From captivating posters to mesmerizing paintings, each piece tells a story, reflecting Izzy's world and her inspiration drawn from the mundane to the magnificent.
+*Blizzy Art* is more than just a blog; it's a narrative journey through the eyes of Izzy, showcasing how art can be woven into the fabric of our everyday lives. From captivating posters to mesmerizing paintings, each piece tells a story, reflecting Izzy's world and her inspiration drawn from the mundane to the magnificent.
 
 Please note, Izzy is a fictional character created for this school project, and all content on the blog, including stories and characters, is entirely fictional.
 
@@ -13,7 +13,7 @@ Please note, Izzy is a fictional character created for this school project, and 
 
 ## Table of Content
 
-- [**The Poster Blog**](#the-poster-blog)
+- [**The Poster Blog**](#Blizzy Art)
   - [**Introduction**](#introduction)
   - [**Table of Content**](#table-of-content)
   - [**Planning & Development**](#planning--development)
@@ -515,6 +515,11 @@ These features aim to enhance user engagement and provide a more personalized ex
 - [Ci Python Linter form](/documentation/testingimages/linter-blog-form.png)
 - [CI Python Linter models](/documentation/testingimages/linter-blog-models.png)
 - [CI Python Linter views](/documentation/testingimages/linter-blog-views.png)
+
+### Jigsaw
+
+- Jigsaw testing is clear
+- ![Jigsaw](/documentation/testingimages/jigsaw.png)
 
 ### Manual testing
 
