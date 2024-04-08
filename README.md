@@ -324,6 +324,17 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 
 ### Features
 
+- **Header**:
+- ![Header mobile](/documentation/testingimages/feature-header-mobile.png)
+- ![Navbar small screens](/documentation/testingimages/feature-nabvbar-mobile.png)
+- ![Header tablet](/documentation/testingimages/feature-header-tablet.png)
+- ![Header desktop](/documentation/testingimages/feature-header-desktop.png)
+
+- **Footer**:
+- ![Footer mobile](/documentation/testingimages/feature-footer-mobile.png)
+- ![Footer tablet](/documentation/testingimages/feature-footer-tablet.png)
+- ![Footer desktop](/documentation/testingimages/feature-footer-desktop.png)
+
 - **Homepage**:
 
 - ![Homepage Mobile](/documentation/testingimages/feature-hero-mobile.png)
@@ -341,6 +352,8 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 - ![Blog page Tablet](/documentation/testingimages/feature-blog-tablet.png)
 - ![Blog page Desktop](/documentation/testingimages/feature-blog-desktop.png)
 
+- ![Not logged in](/documentation/testingimages/feature-notloggedin-blog.png)
+
 - *Pages & Arrows Blog Page*:
 - ![Blog page page number/arrow](/documentation/testingimages/feature-pagination-desktop.png)
 
@@ -348,6 +361,25 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 - ![Category page Mobile](/documentation/testingimages/feature-category-mobile.png)
 - ![Category page Tablet](/documentation/testingimages/feature-category-tablet.png)
 - ![Category page Desktop](/documentation/testingimages/feature-category-desktop.png)
+
+- **Login Page**:
+- ![Login Page Mobile](/documentation/testingimages/feature-login-mobile.png)
+
+- **Register Page**:
+- ![Register Page Mobile](/documentation/testingimages/feature-register-mobile.png)
+
+- **Logout Page**:
+- ![Logout Page Mobile](/documentation/testingimages/feature-logout-mobile.png)
+- ![Logout Page message](/documentation/testingimages/feature-logout-message-mobile.png)
+
+- **Comments**:
+- ![Comments Logged in](/documentation/testingimages/feature-loggedin-comments.png)
+- ![Comments Not logged in](/documentation/testingimages/feature-notloggedin-comments.png)
+- ![Comments edit](/documentation/testingimages/feautre-editcomment.png)
+- ![Comments delete](/documentation/testingimages/feature-deletecomment.png)
+- ![Comments message apprroval](/documentation/testingimages/feature-awaiting-approval.png)
+
+- ![]
 
 - [Back to Top](#table-of-content)
 
