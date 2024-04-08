@@ -500,6 +500,15 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 - [Back to Top](#table-of-content)
 
+### CI Python Linter
+
+- CI Python Linter tests are all okey
+
+- [CI Python Linter admin](/documentation/testingimages/linter-blog-admin.png)
+- [Ci Python Linter form](/documentation/testingimages/linter-blog-form.png)
+- [CI Python Linter models](/documentation/testingimages/linter-blog-models.png)
+- [CI Python Linter views](/documentation/testingimages/linter-blog-views.png)
+
 ### Manual testing
 
 I tested the website manualy throughout the whole developing progress. The website is tested in Safari, Google Chrome and Brave. The website is also tested from an Iphone.
