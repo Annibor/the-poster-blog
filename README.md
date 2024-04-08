@@ -325,9 +325,29 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 ### Features
 
 - **Homepage**:
-- ![Homepage Desktop](./documentation/)
-- ![Homepage Tablet](./documentation/)
-- ![Homepage Mobile](./documentation/)
+
+- ![Homepage Mobile](/documentation/testingimages/feature-hero-mobile.png)
+- ![Homepage Mobile 2](/documentation/testingimages/feature-latestpost-mobile.png)
+
+- ![Homepage Tablet](/documentation/testingimages/feature-hero-tablet.png)
+- ![Homepage Tablet 2](/documentation/testingimages/feature-latestpost-tablet.png)
+
+- ![Homepage Desktop](/documentation/testingimages/feature-hero-desktop.png)
+- ![Homepage Desktop 2](/documentation/testingimages/feature-latestpost-desktop.png)
+
+- **Blog page**:
+
+- ![Blog page Mobile](/documentation/testingimages/feature-blog-mobile.png)
+- ![Blog page Tablet](/documentation/testingimages/feature-blog-tablet.png)
+- ![Blog page Desktop](/documentation/testingimages/feature-blog-desktop.png)
+
+- *Pages & Arrows Blog Page*:
+- ![Blog page page number/arrow](/documentation/testingimages/feature-pagination-desktop.png)
+
+- **Category Page**:
+- ![Category page Mobile](/documentation/testingimages/feature-category-mobile.png)
+- ![Category page Tablet](/documentation/testingimages/feature-category-tablet.png)
+- ![Category page Desktop](/documentation/testingimages/feature-category-desktop.png)
 
 - [Back to Top](#table-of-content)
 
