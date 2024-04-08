@@ -33,6 +33,7 @@ Please note, Izzy is a fictional character created for this school project, and 
       - [**Epic 5: Website Styling and Responsiveness**](#epic-5-website-styling-and-responsiveness)
     - [**Adaptive Development and Reflection**](#adaptive-development-and-reflection)
     - [**User-Centered Approach**](#user-centered-approach)
+    - [**Database schema**](#database-schema)
     - [**Wireframes**](#wireframes)
       - [**Home Page**](#home-page)
     - [**Design Philosophy/ Features**](#design-philosophy-features)
@@ -216,6 +217,22 @@ By placing our users at the heart of The Poster Blog's development, we strive to
 
 - [Back to Top](#table-of-content)
 
+### Database schema
+- **User Model (Django AllAuth)**: Serves as the central model, linking to other models like posts, comments, and likes for comprehensive user interaction within the platform.
+
+- **Category Model**: Categorizes posts into distinct groups. Fields include a unique `name` and `slug` for URL handling. Categories help organize posts for easier navigation and discovery by users.
+
+- **Post Model**: Represents the core content of the platform - the blog posts themselves. Each post is linked to admin (as the author) and categorized under `Category`. Essential fields include `title`, `slug`, `content`, and `status` (draft or published), facilitating rich content presentation and management.
+
+- **Comment Model**: Enables users to engage with posts through comments. Each comment is associated with a `Post` and a `User` (author of the comment), and includes a `body`, approval status, and timestamp. Admin approval is required for comments to be visible, ensuring quality control.
+
+- **Like Model**: Allows users to express their appreciation for posts. It prevents duplicate likes on a single post by a user through a unique together constraint on `User` and `Post`, enhancing the interactive experience of the platform.
+
+- The platform supports full CRUD operations on posts within user-interested categories, fostering a dynamic blogging environment.
+- Commenting feature enriches user engagement, with an approval mechanism in place to maintain content relevance and quality.
+- Like functionality introduces a simple yet effective form of user interaction with content, promoting a more connected and interactive community.
+
+- ![Database schema](/documentation/otherimages/erd-schema.png)
 
 ### Wireframes
 
