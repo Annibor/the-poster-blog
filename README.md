@@ -318,7 +318,7 @@ They are also chosen to make sure the fokus is drawn to Izzy´s blog posts.
 
 ### Colors
 - Palette Choices:
-The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complements Izzy's vibrant artwork and creates an inviting atmosphere. These colors are not just background elements but integral parts of the storytelling process, evoking emotions and setting the mood for each post.
+The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complements Izzy's vibrant artwork adn life and creates an inviting atmosphere. These colors are not just background elements but integral parts of the storytelling process, evoking emotions and setting the mood for each post.
 
 - [Back to Top](#table-of-content)
 
