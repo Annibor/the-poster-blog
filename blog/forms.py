@@ -12,6 +12,7 @@ class CommentForm(forms.ModelForm):
                                           'placeholder': 'Leave a comment'}),
         }
 
+
 class RegisterForm(SignupForm):
     """
     Adapted Form for custom signup page from
@@ -27,7 +28,7 @@ class RegisterForm(SignupForm):
         label="Username",
         widget=forms.TextInput(attrs={"placeholder": "Username"}),
     )
-    
+
     def register(self, request, user):
         # Changes allauth form to costume form
         user = super(RegisterForm, self).save(request)
