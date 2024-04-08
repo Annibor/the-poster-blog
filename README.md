@@ -33,6 +33,7 @@ Please note, Izzy is a fictional character created for this school project, and 
       - [**Epic 5: Website Styling and Responsiveness**](#epic-5-website-styling-and-responsiveness)
     - [**Adaptive Development and Reflection**](#adaptive-development-and-reflection)
     - [**User-Centered Approach**](#user-centered-approach)
+    - [**User Stories images**](#user-stories-images)
     - [**Database schema**](#database-schema)
     - [**Wireframes**](#wireframes)
       - [**Home Page**](#home-page)
@@ -218,6 +219,13 @@ By placing our users at the heart of The Poster Blog's development, we strive to
 
 - [Back to Top](#table-of-content)
 
+### User Stories images
+Here are the user stories and epics connected to the project:
+
+![User stories 1](/documentation/otherimages/userstories.png)
+![User stories 2](/documentation/otherimages/userstories2.png)
+![User stories 3](/documentation/otherimages/userstories3.png)
+
 ### Database schema
 - **User Model (Django AllAuth)**: Serves as the central model, linking to other models like posts, comments, and likes for comprehensive user interaction within the platform.
 
@@ -278,8 +286,6 @@ I've created my wireframes for the website by using [Balsamiq](https://balsamiq.
 #### **Register**
 
 - ![Register page](documentation/wireframes/wireframes-register-mobile.png)
-- ![Register page tablet](documentation/wireframes/wireframes-register-tablet.png)
-- ![Register page desktop](documentation/wireframes/wireframes-register-desktop.png)
 
 - [Back to Top](#table-of-content)
 
