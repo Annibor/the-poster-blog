@@ -379,8 +379,6 @@ The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complem
 - ![Comments delete](/documentation/testingimages/feature-deletecomment.png)
 - ![Comments message apprroval](/documentation/testingimages/feature-awaiting-approval.png)
 
-- ![]
-
 - [Back to Top](#table-of-content)
 
 ### Future Features
@@ -457,6 +455,24 @@ These features aim to enhance user engagement and provide a more personalized ex
 - [Back to Top](#table-of-content)
 
 ### Lighthouse
+
+- ![Lighthouse Homepage mobile](/documentation/testingimages/lighthouse-home-mobile.png)
+- ![Lighthouse Homepage desktop](/documentation/testingimages/lighthouse-home-desktop.png)
+
+- ![Lighthouse Blogpage mobile](/documentation/testingimages/lighthouse-blog-mobile.png)
+- ![Lighthouse Blogpage desktop](/documentation/testingimages/lighthouse-blog-desktop.png)
+
+- ![Lighthouse Category mobile](/documentation/testingimages/lighthouse-category-mobile.png)
+- ![Lighthouse Category desktop](/documentation/testingimages/lighthouse-category-desktop.png)
+
+- ![Lighthouse Login Mobile](/documentation/testingimages/lighthouse-login-mobile.png)
+- ![Lighthouse Login Desktop](/documentation/testingimages/lighthouse-login-desktop.png)
+
+- ![Lighthouse Register Mobile](/documentation/testingimages/lighthouse-register-mobile.png)
+- ![Lighthouse Register Desktop](/documentation/testingimages/lighthouse-register-desktop.png)
+
+- ![Lighthouse Logout Mobile](/documentation/testingimages/lighthouse-logout-mobile.png)
+- ![Lighthouse Logout Desktop](/documentation/testingimages/lighthouse-logout-desktop.png)
 
 - [Back to Top](#table-of-content)
 
