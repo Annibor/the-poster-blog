@@ -721,19 +721,7 @@ I tested the website manualy throughout the whole developing progress. The websi
      <td>Save button saves the edited comment and update it.</td>
      <th>As expected</th>
      <th>Pass</th>
-   </tr><tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
-     <th>As expected</th>
-     <th>Pass</th>
-   </tr><tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
-     <th>As expected</th>
-     <th>Pass</th>
    </tr>
-   
-
   </tbody>
 </table>
 
@@ -895,12 +883,28 @@ I would like to express my gratitude to the following individuals who have made 
 
 ## What I've Learned
 
-During the development of this project, I've gained valuable insights and skills that have enriched my coding journey. Here are some of the key takeaways:
+
+In developing this project, I've embarked on a journey that was both challenging and immensely rewarding. Here are some reflections on what I've learned along the way:
 
 - **Problems**:
 I had a lot of problems with changes that I made in the code came back after som git commits. Here I will show an example of code that I deleted, and after some git commits tha code was back, and I had to delete it again:
 - [Changed Code Back](/documentation/otherimages/changed-code-back.png)
 - [Changed Code Back 2](/documentation/otherimages/changed-code-back-2.png)
 - [Changed Code Back 3](/documentation/otherimages/changed-code-back-3.png)
+
+- **Adaptability in Problem-Solving**: I encountered numerous challenges, from bugs in the code to design hurdles. Each issue required a unique solution, teaching me the importance of adaptability and perseverance. It was a reminder that problem-solving is a dynamic process that often requires thinking outside the box.
+
+- **Depth of Django and Python**: This project deepened my understanding of Django and Python, particularly in how they can be leveraged to create robust web applications. I've gained a greater appreciation for Django's ORM, class-based views, and the powerful templating system, which together make it easier to build and manage dynamic content.
+
+- **The Importance of User-Centric Design**: Throughout the development, the focus remained on creating an intuitive and accessible user experience. This project reinforced the principle that design should always prioritize the needs and preferences of the user. It's not just about aesthetic appeal but about creating interfaces that are logical, navigable, and inclusive.
+
+- **Agile Development Practices**: Implementing agile methodologies, such as breaking down the project into smaller, manageable epics and user stories, was instrumental in maintaining focus and efficiency. It highlighted the value of flexibility in the development process and the need for continuous iteration based on feedback.
+
+- **The Joy of Learning**: Above all, this project has been a testament to the joy of learning. Each obstacle overcome and each functionality successfully implemented was a reminder of why I love coding: the constant cycle of learning, creating, and improving is deeply fulfilling.
+
+- **Early Testing with W3C Validation**: One crucial strategy I learned was the importance of conducting early and frequent tests with W3C validators. This approach helped identify and rectify markup errors and compatibility issues sooner, minimizing potential headaches down the line. It underscored the value of integrating best practices and standards compliance from the start of the development process, ensuring a more stable and accessible end product.
+
+As I reflect on this project, I'm grateful for the opportunities it has provided to grow as a developer. The lessons learned extend beyond technical skills; they encompass the softer skills of patience, resilience, and creative thinking, which are equally valuable in this ever-evolving field.
+
 
 - [Back to Top](#table-of-content)
