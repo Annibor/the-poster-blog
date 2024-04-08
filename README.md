@@ -1,11 +1,11 @@
-# The Poster Blog
+# Blizzy Art
 
 []()
 
 # Introduction
 
 Welcome to *The Poster Blog*, a vibrant space curated by Izzy, a passionate poster artist and painter. Through her blog, Izzy explores the intersection of art and daily life, offering a glimpse into her creative process, sharing personal stories, and providing valuable tips and tricks for fellow art enthusiasts.
-*The Poster Blog* is more than just a blog; it's a narrative journey through the eyes of Izzy, showcasing how art can be woven into the fabric of our everyday lives. From captivating posters to mesmerizing paintings, each piece tells a story, reflecting Izzy's world and her inspiration drawn from the mundane to the magnificent.
+*Blizzy Art* is more than just a blog; it's a narrative journey through the eyes of Izzy, showcasing how art can be woven into the fabric of our everyday lives. From captivating posters to mesmerizing paintings, each piece tells a story, reflecting Izzy's world and her inspiration drawn from the mundane to the magnificent.
 
 Please note, Izzy is a fictional character created for this school project, and all content on the blog, including stories and characters, is entirely fictional.
 
@@ -13,7 +13,7 @@ Please note, Izzy is a fictional character created for this school project, and 
 
 ## Table of Content
 
-- [**The Poster Blog**](#the-poster-blog)
+- [**The Poster Blog**](#Blizzy Art)
   - [**Introduction**](#introduction)
   - [**Table of Content**](#table-of-content)
   - [**Planning & Development**](#planning--development)
@@ -33,6 +33,8 @@ Please note, Izzy is a fictional character created for this school project, and 
       - [**Epic 5: Website Styling and Responsiveness**](#epic-5-website-styling-and-responsiveness)
     - [**Adaptive Development and Reflection**](#adaptive-development-and-reflection)
     - [**User-Centered Approach**](#user-centered-approach)
+    - [**User Stories images**](#user-stories-images)
+    - [**Database schema**](#database-schema)
     - [**Wireframes**](#wireframes)
       - [**Home Page**](#home-page)
     - [**Design Philosophy/ Features**](#design-philosophy-features)
@@ -47,9 +49,9 @@ Please note, Izzy is a fictional character created for this school project, and 
   - [**Testing**](#testing)
   - [**Devtools**](#devtools)
     - [**Ligthouse**](#lighthouse)
-      - [**Issues**](#issues)
-      - [**Results**](#results)
+    - [**JS Hint**](#js-hint)
   - [**Deployment**](#deployment)
+  - [**Bugs**](#bugs)
   - [**Languages**](#languages)
   - [**Libraries and Installed Packages**](#libraries-and-installed-packages)
   - [**Software**](#software)
@@ -217,6 +219,29 @@ By placing our users at the heart of The Poster Blog's development, we strive to
 
 - [Back to Top](#table-of-content)
 
+### User Stories images
+Here are the user stories and epics connected to the project:
+
+![User stories 1](/documentation/otherimages/userstories.png)
+![User stories 2](/documentation/otherimages/userstories2.png)
+![User stories 3](/documentation/otherimages/userstories3.png)
+
+### Database schema
+- **User Model (Django AllAuth)**: Serves as the central model, linking to other models like posts, comments, and likes for comprehensive user interaction within the platform.
+
+- **Category Model**: Categorizes posts into distinct groups. Fields include a unique `name` and `slug` for URL handling. Categories help organize posts for easier navigation and discovery by users.
+
+- **Post Model**: Represents the core content of the platform - the blog posts themselves. Each post is linked to admin (as the author) and categorized under `Category`. Essential fields include `title`, `slug`, `content`, and `status` (draft or published), facilitating rich content presentation and management.
+
+- **Comment Model**: Enables users to engage with posts through comments. Each comment is associated with a `Post` and a `User` (author of the comment), and includes a `body`, approval status, and timestamp. Admin approval is required for comments to be visible, ensuring quality control.
+
+- **Like Model**: Allows users to express their appreciation for posts. It prevents duplicate likes on a single post by a user through a unique together constraint on `User` and `Post`, enhancing the interactive experience of the platform.
+
+- The platform supports full CRUD operations on posts within user-interested categories, fostering a dynamic blogging environment.
+- Commenting feature enriches user engagement, with an approval mechanism in place to maintain content relevance and quality.
+- Like functionality introduces a simple yet effective form of user interaction with content, promoting a more connected and interactive community.
+
+- ![Database schema](/documentation/otherimages/erd-schema.png)
 
 ### Wireframes
 
@@ -261,8 +286,6 @@ I've created my wireframes for the website by using [Balsamiq](https://balsamiq.
 #### **Register**
 
 - ![Register page](documentation/wireframes/wireframes-register-mobile.png)
-- ![Register page tablet](documentation/wireframes/wireframes-register-tablet.png)
-- ![Register page desktop](documentation/wireframes/wireframes-register-desktop.png)
 
 - [Back to Top](#table-of-content)
 
@@ -318,16 +341,66 @@ They are also chosen to make sure the fokus is drawn to Izzy´s blog posts.
 
 ### Colors
 - Palette Choices:
-The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complements Izzy's vibrant artwork and creates an inviting atmosphere. These colors are not just background elements but integral parts of the storytelling process, evoking emotions and setting the mood for each post.
+The color scheme, featuring a warm mix of #c1666b, #a25058, and #fedd97, complements Izzy's vibrant artwork adn life and creates an inviting atmosphere. These colors are not just background elements but integral parts of the storytelling process, evoking emotions and setting the mood for each post.
 
 - [Back to Top](#table-of-content)
 
 ### Features
 
+- **Header**:
+- ![Header mobile](/documentation/testingimages/feature-header-mobile.png)
+- ![Navbar small screens](/documentation/testingimages/feature-nabvbar-mobile.png)
+- ![Header tablet](/documentation/testingimages/feature-header-tablet.png)
+- ![Header desktop](/documentation/testingimages/feature-header-desktop.png)
+
+- **Footer**:
+- ![Footer mobile](/documentation/testingimages/feature-footer-mobile.png)
+- ![Footer tablet](/documentation/testingimages/feature-footer-tablet.png)
+- ![Footer desktop](/documentation/testingimages/feature-footer-desktop.png)
+
 - **Homepage**:
-- ![Homepage Desktop](./documentation/)
-- ![Homepage Tablet](./documentation/)
-- ![Homepage Mobile](./documentation/)
+
+- ![Homepage Mobile](/documentation/testingimages/feature-hero-mobile.png)
+- ![Homepage Mobile 2](/documentation/testingimages/feature-latestpost-mobile.png)
+
+- ![Homepage Tablet](/documentation/testingimages/feature-hero-tablet.png)
+- ![Homepage Tablet 2](/documentation/testingimages/feature-latestpost-tablet.png)
+
+- ![Homepage Desktop](/documentation/testingimages/feature-hero-desktop.png)
+- ![Homepage Desktop 2](/documentation/testingimages/feature-latestpost-desktop.png)
+
+- **Blog page**:
+
+- ![Blog page Mobile](/documentation/testingimages/feature-blog-mobile.png)
+- ![Blog page Tablet](/documentation/testingimages/feature-blog-tablet.png)
+- ![Blog page Desktop](/documentation/testingimages/feature-blog-desktop.png)
+
+- ![Not logged in](/documentation/testingimages/feature-notloggedin-blog.png)
+
+- *Pages & Arrows Blog Page*:
+- ![Blog page page number/arrow](/documentation/testingimages/feature-pagination-desktop.png)
+
+- **Category Page**:
+- ![Category page Mobile](/documentation/testingimages/feature-category-mobile.png)
+- ![Category page Tablet](/documentation/testingimages/feature-category-tablet.png)
+- ![Category page Desktop](/documentation/testingimages/feature-category-desktop.png)
+
+- **Login Page**:
+- ![Login Page Mobile](/documentation/testingimages/feature-login-mobile.png)
+
+- **Register Page**:
+- ![Register Page Mobile](/documentation/testingimages/feature-register-mobile.png)
+
+- **Logout Page**:
+- ![Logout Page Mobile](/documentation/testingimages/feature-logout-mobile.png)
+- ![Logout Page message](/documentation/testingimages/feature-logout-message-mobile.png)
+
+- **Comments**:
+- ![Comments Logged in](/documentation/testingimages/feature-loggedin-comments.png)
+- ![Comments Not logged in](/documentation/testingimages/feature-notloggedin-comments.png)
+- ![Comments edit](/documentation/testingimages/feautre-editcomment.png)
+- ![Comments delete](/documentation/testingimages/feature-deletecomment.png)
+- ![Comments message apprroval](/documentation/testingimages/feature-awaiting-approval.png)
 
 - [Back to Top](#table-of-content)
 
@@ -381,6 +454,10 @@ These features aim to enhance user engagement and provide a more personalized ex
 - [Blog page 1](/documentation/testingimages/wc3-blog-1.png)
 - [Blog page 2](/documentation/testingimages/wc3-blog-2.png)
 
+- Category page
+- [Category page 1](/documentation/testingimages/wc3-category-1.png)
+- [Category page 2](/documentation/testingimages/wc3-category-2.png) 
+
 - Login page
 -[Login page](/documentation/testingimages/wc3-login.png)
 
@@ -402,26 +479,47 @@ These features aim to enhance user engagement and provide a more personalized ex
 
 ### Lighthouse
 
+- ![Lighthouse Homepage mobile](/documentation/testingimages/lighthouse-home-mobile.png)
+- ![Lighthouse Homepage desktop](/documentation/testingimages/lighthouse-home-desktop.png)
+
+- ![Lighthouse Blogpage mobile](/documentation/testingimages/lighthouse-blog-mobile.png)
+- ![Lighthouse Blogpage desktop](/documentation/testingimages/lighthouse-blog-desktop.png)
+
+- ![Lighthouse Category mobile](/documentation/testingimages/lighthouse-category-mobile.png)
+- ![Lighthouse Category desktop](/documentation/testingimages/lighthouse-category-desktop.png)
+
+- ![Lighthouse Login Mobile](/documentation/testingimages/lighthouse-login-mobile.png)
+- ![Lighthouse Login Desktop](/documentation/testingimages/lighthouse-login-desktop.png)
+
+- ![Lighthouse Register Mobile](/documentation/testingimages/lighthouse-register-mobile.png)
+- ![Lighthouse Register Desktop](/documentation/testingimages/lighthouse-register-desktop.png)
+
+- ![Lighthouse Logout Mobile](/documentation/testingimages/lighthouse-logout-mobile.png)
+- ![Lighthouse Logout Desktop](/documentation/testingimages/lighthouse-logout-desktop.png)
+
 - [Back to Top](#table-of-content)
 
-#### Issues
-
-- 
-- ![]()
-
-- 
-
-- ![]()
-
-- [Back to Top](#table-of-content)
-
-#### Results
+### JS HINT
 
 - JSHint test for Javascript code.
 
-- ![]()
+- ![Js hint test for javascript](/documentation/testingimages/jshint-test.png)
 
 - [Back to Top](#table-of-content)
+
+### CI Python Linter
+
+- CI Python Linter tests are all okey
+
+- [CI Python Linter admin](/documentation/testingimages/linter-blog-admin.png)
+- [Ci Python Linter form](/documentation/testingimages/linter-blog-form.png)
+- [CI Python Linter models](/documentation/testingimages/linter-blog-models.png)
+- [CI Python Linter views](/documentation/testingimages/linter-blog-views.png)
+
+### Jigsaw
+
+- Jigsaw testing is clear
+- ![Jigsaw](/documentation/testingimages/jigsaw.png)
 
 ### Manual testing
 
@@ -661,19 +759,7 @@ I tested the website manualy throughout the whole developing progress. The websi
      <td>Save button saves the edited comment and update it.</td>
      <th>As expected</th>
      <th>Pass</th>
-   </tr><tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
-     <th>As expected</th>
-     <th>Pass</th>
-   </tr><tr>
-     <td>Testing description.</td>
-     <td>Expected action.</td>
-     <th>As expected</th>
-     <th>Pass</th>
    </tr>
-   
-
   </tbody>
 </table>
 
@@ -722,6 +808,10 @@ Ensure your project includes a `requirements.txt` and a `Procfile`, which are es
 My link is: []()
 
 - [Back to Top](#table-of-content)
+
+## Bugs
+
+- The password reset template don't work properly, instead I added in a paragraph for users to email Izzy if having problem with password. This is not ideal, but snece this is a school project I won't pay for a mailserver sence there is not mentioned that it's required to add it to this project.
 
 ## Languages
 
@@ -814,6 +904,7 @@ This project showcases a full-stack web development approach, leveraging the str
 
 - This README is based upon three sourses for guidance: one by Davis Calikes, available at [GitHub](https://github.com/davidcalikes/portfolio-project-one#readme), one by Victoria Traynor, avaliable at [Github](https://github.com/VictoriaT87/P4-Aventine-Wellness/blob/main/README.md), and another authored by me, available at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
 - Usage, Modification, Distrubition, Private Use and Liability Content: The guidelines pertaining to usage, modification, distribution, private use, and liability are directly derived from my project, accessible at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
+- This project is inspired by the I Think Before I Blog form code institue. 
 
 - [Back to Top](#table-of-content)
 
@@ -835,12 +926,28 @@ I would like to express my gratitude to the following individuals who have made 
 
 ## What I've Learned
 
-During the development of this project, I've gained valuable insights and skills that have enriched my coding journey. Here are some of the key takeaways:
+
+In developing this project, I've embarked on a journey that was both challenging and immensely rewarding. Here are some reflections on what I've learned along the way:
 
 - **Problems**:
 I had a lot of problems with changes that I made in the code came back after som git commits. Here I will show an example of code that I deleted, and after some git commits tha code was back, and I had to delete it again:
 - [Changed Code Back](/documentation/otherimages/changed-code-back.png)
 - [Changed Code Back 2](/documentation/otherimages/changed-code-back-2.png)
 - [Changed Code Back 3](/documentation/otherimages/changed-code-back-3.png)
+
+- **Adaptability in Problem-Solving**: I encountered numerous challenges, from bugs in the code to design hurdles. Each issue required a unique solution, teaching me the importance of adaptability and perseverance. It was a reminder that problem-solving is a dynamic process that often requires thinking outside the box.
+
+- **Depth of Django and Python**: This project deepened my understanding of Django and Python, particularly in how they can be leveraged to create robust web applications. I've gained a greater appreciation for Django's ORM, class-based views, and the powerful templating system, which together make it easier to build and manage dynamic content.
+
+- **The Importance of User-Centric Design**: Throughout the development, the focus remained on creating an intuitive and accessible user experience. This project reinforced the principle that design should always prioritize the needs and preferences of the user. It's not just about aesthetic appeal but about creating interfaces that are logical, navigable, and inclusive.
+
+- **Agile Development Practices**: Implementing agile methodologies, such as breaking down the project into smaller, manageable epics and user stories, was instrumental in maintaining focus and efficiency. It highlighted the value of flexibility in the development process and the need for continuous iteration based on feedback.
+
+- **The Joy of Learning**: Above all, this project has been a testament to the joy of learning. Each obstacle overcome and each functionality successfully implemented was a reminder of why I love coding: the constant cycle of learning, creating, and improving is deeply fulfilling.
+
+- **Early Testing with W3C Validation**: One crucial strategy I learned was the importance of conducting early and frequent tests with W3C validators. This approach helped identify and rectify markup errors and compatibility issues sooner, minimizing potential headaches down the line. It underscored the value of integrating best practices and standards compliance from the start of the development process, ensuring a more stable and accessible end product.
+
+As I reflect on this project, I'm grateful for the opportunities it has provided to grow as a developer. The lessons learned extend beyond technical skills; they encompass the softer skills of patience, resilience, and creative thinking, which are equally valuable in this ever-evolving field.
+
 
 - [Back to Top](#table-of-content)
