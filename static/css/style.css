@@ -95,13 +95,11 @@ h3 {
 /* --- BASE.HTML --- */
 /* -----------------------*/
 
-.logo {
-  h1 {
-    font-size: 3.6rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-  }
+.logo h1 {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .btn-nav {
@@ -340,7 +338,6 @@ h3 {
   letter-spacing: 0.08rem;
   color: #999;
   text-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-  text-align: none;
 }
 
 .post-content {
