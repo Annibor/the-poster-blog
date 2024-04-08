@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /* Function to retrieve the CSRF token needed for POST requests in Django */
 function getCSRFToken() {
     /* Selects the CSRF token input field and retrieves its value */
